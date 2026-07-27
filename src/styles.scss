@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'styles/index';
+
+
+p{
+    font-family: 'Syne';
+    font-weight: 800;
+    font-size: 36px;
+}
