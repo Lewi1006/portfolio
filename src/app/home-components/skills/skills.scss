@@ -1,0 +1,84 @@
+@use '../../../../public/styles/index' as *;
+
+.skills {
+
+   &__frame{
+    border: 4px solid black;
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top: 40px;
+   } 
+
+  &__wrapper {
+    width: 100%;
+    @include d-flex(column, center, center, 60px);
+
+    h2 {
+      font-family: $font-headline;
+      background-color: $beige-bg;
+      font-weight: 800;
+      font-size: 78px;
+      line-height: 100%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  &__icons {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+  }
+
+  &__icon {
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    img {
+      width: 75px;
+      height: auto;
+    }
+
+    p {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 120%;
+      text-align: center;
+    }
+  }
+
+  &__contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    img{
+      width: 75px;
+      height: auto;  
+    }
+
+    p{
+       font-size: 22px; 
+       line-height: 120%;
+
+       span{
+        color: $highlight;
+
+       }
+    }
+  }
+}
