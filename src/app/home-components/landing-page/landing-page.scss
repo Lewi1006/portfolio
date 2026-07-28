@@ -1,0 +1,68 @@
+@use '../../../../public/styles/index' as *;
+
+.landing {
+  &__wrapper {
+    @include d-flex(column, center, center, 40px);
+  }
+
+  &__headline {
+    width: 100%;
+    @include d-flex(column, center, center, 20px);
+
+    h1 {
+      width: 100%;
+      font-family: $font-headline;
+      font-weight: 800;
+      font-size: 128px;
+      line-height: 100%;
+      letter-spacing: $text-tighter;
+      text-align: center;
+    }
+  }
+
+  &__subheading {
+    @include d-flex(row, center, center, 20px);
+
+    img {
+      width: 650px;
+      height: auto;
+    }
+
+    p {
+      font-weight: 700;
+      color: $highlight;
+      font-size: 60px;
+      line-height: 100%;
+      letter-spacing: $text-tighter;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    @include d-flex(row, flex-end, space-between);
+  }
+
+  &__email {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 100%;
+    text-align: center;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+
+  &__scroll {
+    @include d-flex(column, center, center, 12px);
+
+    img {
+      height: 200px;
+      width: auto;
+    }
+
+    p {
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 100%;
+    }
+  }
+}
