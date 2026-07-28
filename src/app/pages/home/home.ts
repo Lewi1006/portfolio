@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { LandingPage } from '../../home-components/landing-page/landing-page';
 import { About } from '../../home-components/about/about';
 import { Skills } from '../../home-components/skills/skills';
+import { Portfolio } from '../../home-components/portfolio/portfolio';
 @Component({
   selector: 'app-home',
-  imports: [LandingPage, About, Skills],
+  imports: [LandingPage, About, Skills, Portfolio],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
