@@ -1,3 +1,27 @@
-<a [routerLink]="['/impressum']">Impressum</a>
-<a [routerLink]="['/privacy-policy']">Privacy Policy</a>
+<footer class="footer">
+  <div class="content">
+    <div class="footer__wrapper">
+      <div class="footer__left">
+        <a class="footer__logo" href="/"> [LW] </a>
+        <a class="footer__impressum" [routerLink]="['/impressum']">© Leonie Wind 2026</a>
+      </div>
+
+      <div class="footer__right">
+        <ul class="footer__socials">
+          <li>
+            <a href="/"><img src="/assets/icons/github_btn.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href="/"><img src="/assets/icons/mail_btn.svg" alt=""/></a>
+          </li>
+          <li>
+            <a href="/"><img src="/assets/icons/linkedin_btn.svg" alt=""/></a>
+          </li>
+        </ul>
+
+        <a class="footer__privacy-policy" [routerLink]="['/privacy-policy']">privacy policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
