@@ -4,9 +4,9 @@ main{
     height: fit-content;
     flex: 1;
     padding: 120px 0;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    _gap: 100px;
+    _display:flex;
+    _flex-direction: column;
+    _align-items: center;
+    _justify-content: flex-start;
+    _gap: 80px;
 }
