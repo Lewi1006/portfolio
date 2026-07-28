@@ -1,0 +1,53 @@
+@use '../../../../public/styles/index' as *;
+
+.footer {
+  width: 100%;
+  height: 90px;
+  background-color: $black-bg;
+  color: $font-color-light;
+
+  &__wrapper {
+    width: 100%;
+    height: 90px;
+    @include d-flex(row, center, space-between, 0);
+  }
+
+  &__left {
+    width: fit-content;
+    height: 100%;
+    @include d-flex(column, flex-start, center, 8px);
+  }
+
+  &__logo {
+    font-family: $font-headline;
+    font-weight: 800;
+    letter-spacing: -2px;
+    font-size: 24px;
+  }
+
+  &__impressum {
+    font-size: 22px;
+    line-height: 120%;
+  }
+
+  &__right {
+    width: fit-content;
+    height: 100%;
+    @include d-flex(column, flex-end, center, 0);
+  }
+
+  &__socials {
+    width: fit-content;
+    height: 100%;
+    @include d-flex(row, center, space-between, 40px);
+
+    img {
+      width: 40px;
+      height: auto;
+    }
+  }
+
+  &__privacy-policy {
+    font-size: 16px;
+  }
+}
