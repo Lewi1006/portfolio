@@ -32,10 +32,10 @@
     }
 
     .project-img {
-      width: 50%;
+      width: $project-column-width;
 
       .img-wrapper {
-        width: 620px;
+        width: $project-image-width;
 
         img {
           width: 100%;
@@ -68,7 +68,7 @@
     }
 
     .project-content {
-      width: 50%;
+      width: $project-column-width;
       @include d-flex(column, flex-end, flex-start, 26px);
 
       .project-count {
@@ -80,7 +80,6 @@
       }
 
       .project-details {
-        @include d-flex(column, flex-start, center, 16px);
         display: none;
 
         h3 {
@@ -125,7 +124,7 @@
     }
 
     .project-content .project-details {
-      display: flex;
+      @include d-flex(column, flex-start, center, 16px);
     }
   }
 }
