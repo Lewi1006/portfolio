@@ -28,29 +28,7 @@
     @include d-flex(row, flex-start, space-between);
 
     &.project-reversed {
-      @include d-flex(row-reverse, flex-start, space-between);
-
-      .project-img {
-        .img-wrapper {
-          margin: auto;
-          .arrow-animation {
-            left: 0;
-            transform: translate(-50%, -50%);
-
-            img {
-              transform: rotate(-45deg);
-            }
-          }
-        }
-      }
-
-      .project-content {
-        align-items: flex-start;
-
-        .project-count {
-          text-align: left;
-        }
-      }
+      @include project-reversed;
     }
 
     .project-img {
