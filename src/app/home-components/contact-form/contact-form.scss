@@ -6,14 +6,14 @@
 }
 
 .contact-wrapper {
-    width: 100%;
-    @include d-flex(column, center, center, 60px);
-    background-color: $black-bg;
+  width: 100%;
+  @include d-flex(column, center, center, 60px);
+  background-color: $black;
 
   h2 {
     width: 100%;
     font-family: $font-headline;
-    color: $font-color-light;
+    color: $beige;
     font-weight: 800;
     font-size: 78px;
     line-height: 100%;
@@ -28,12 +28,12 @@
       @include d-flex(column, center, center, 10px);
       h3 {
         font-weight: 700;
-        color: $highlight;
+        color: $blue;
         font-size: 32px;
       }
       p {
         font-size: 22px;
-        color: $font-color-light;
+        color: $beige;
       }
     }
 
@@ -43,9 +43,9 @@
 
       input {
         width: 100%;
-        border-bottom: 2px solid $beige-bg;
+        border-bottom: 2px solid $beige;
         background: transparent;
-        color: $font-color-light;
+        color: $beige;
         font-size: 20px;
         padding: 8px 0;
       }
@@ -56,8 +56,8 @@
         width: 100%;
         height: 200px;
         font-size: 20px;
-        border-bottom: 2px solid $beige-bg;
-        color: $font-color-light;
+        border-bottom: 2px solid $beige;
+        color: $beige;
       }
 
       img {
@@ -71,7 +71,7 @@
 
     .contact-consent {
       @include d-flex(row, center, center, 20px);
-      color: $font-color-light;
+      color: $beige;
       font-size: 16px;
 
       input[type='checkbox'] {
@@ -81,16 +81,16 @@
 
       label {
         span {
-          color: $highlight;
+          color: $blue;
         }
       }
     }
 
     .contact-btn {
       font-size: 24px;
-      color: $font-color-light;
+      color: $beige;
       align-self: center;
-      border: solid 3px $beige-bg;
+      border: solid 3px $beige;
       padding: 8px 20px;
     }
   }
