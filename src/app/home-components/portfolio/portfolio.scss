@@ -30,8 +30,18 @@
     &.project-reversed {
       @include d-flex(row-reverse, flex-start, space-between);
 
-      .project-img{
-        text-align: end;
+      .project-img {
+        .img-wrapper {
+          margin: auto;
+          .arrow-animation {
+            left: 0;
+            transform: translate(-50%, -50%);
+
+            img {
+              transform: rotate(-45deg);
+            }
+          }
+        }
       }
 
       .project-content {
@@ -46,10 +56,36 @@
     .project-img {
       width: 50%;
 
-      img {
+      .img-wrapper {
         width: 620px;
-        height: auto;
-        filter: grayscale(100%);
+
+        img {
+          width: 100%;
+          height: auto;
+          filter: grayscale(100%);
+        }
+
+        .arrow-animation {
+          display: none;
+
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translate(50%, -50%);
+
+          width: 60px;
+          height: 60px;
+          background-color: $black-bg;
+          border-radius: 50%;
+
+          z-index: 2;
+
+          img {
+            height: 40px;
+            width: auto;
+            transform: rotate(45deg);
+          }
+        }
       }
     }
 
@@ -95,22 +131,19 @@
         }
       }
     }
-
-    .arrow-animation {
-      background-color: $black-bg;
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      z-index: 2;
-      position: absolute;
-      left: 40%;
-      top: 40%;
-    }
   }
 
   .project:hover {
-    .project-img img {
-      filter: grayscale(0%);
+    .project-img {
+      .img-wrapper {
+        a img {
+          filter: grayscale(0%);
+        }
+
+        .arrow-animation {
+          @include d-flex(row, center, center);
+        }
+      }
     }
 
     .project-content .project-details {
