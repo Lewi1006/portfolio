@@ -1,34 +1,37 @@
 <section class="portfolio">
   <div class="content">
-    <div class="portfolio__wrapper">
-      <div class="portfolio__headline">
+    <div class="portfolio-wrapper">
+      <div class="portfolio-headline">
         <h2>Portfolio</h2>
-        <p class="portfolio__intro">
+        <p class="portfolio-intro">
           Explore a selection of my work here - Interact with projects to see my skills in action.
         </p>
       </div>
 
       @for (currentProject of projectList; track currentProject.id; let i = $index) {
-        <article class="portfolio__project">
-          <div class="portfolio__project-img">
+        <article class="project">
+          <div class="project-img">
             <a href=""><img [src]="currentProject.img" [alt]="currentProject.title" /></a>
           </div>
 
-          <div class="portfolio__project-content">
-            <p class="portfolio__project-count">{{formatNumber(i + 1)}}/{{formatNumber(projectList.length)}}</p>
+          <div class="project-content">
+            <p class="project-count">
+              {{ formatNumber(i + 1) }}/{{ formatNumber(projectList.length) }}
+            </p>
 
-            <div class="portfolio__project-details">
-              <h3>{{currentProject.title}}</h3>
-              <p class="portfolio__project-skills">{{currentProject.skills}}</p>
-              <p>
-                {{currentProject.description}}
+            <div class="project-details">
+              <h3>{{ currentProject.title }}</h3>
+              <p class="project-skills">{{ currentProject.skills }}</p>
+              <p class="project-description">
+                {{ currentProject.description }}
               </p>
-              <button class="portfolio__project-btn">Github</button>
+              <button class="project-btn">Github</button>
             </div>
           </div>
-          <!-- <div class="portfolio__arrow-animation"></div> -->
+          <!-- <div class="arrow-animation"></div> -->
         </article>
       }
     </div>
   </div>
 </section>
+
