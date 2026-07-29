@@ -8,8 +8,8 @@
         </p>
       </div>
 
-      @for (currentProject of projectList; track currentProject.id; let i = $index) {
-        <article class="project">
+      @for (currentProject of projectList; track currentProject.id; let i = $index, isOdd = $odd) {
+        <article class="project" [class.project-reversed]="isOdd">
           <div class="project-img">
             <a href=""><img [src]="currentProject.img" [alt]="currentProject.title" /></a>
           </div>

@@ -5,7 +5,7 @@
 }
 
 .portfolio-wrapper {
-  @include d-flex(column, center, center, 60px);
+  @include d-flex(column, center, center, 100px);
 
   .portfolio-headline {
     @include d-flex(column, center, center, 20px);
@@ -26,6 +26,22 @@
   .project {
     width: 100%;
     @include d-flex(row, flex-start, space-between);
+
+    &.project-reversed {
+      @include d-flex(row-reverse, flex-start, space-between);
+
+      .project-img{
+        text-align: end;
+      }
+
+      .project-content {
+        align-items: flex-start;
+
+        .project-count {
+          text-align: left;
+        }
+      }
+    }
 
     .project-img {
       width: 50%;
@@ -69,6 +85,7 @@
 
         .project-description {
           font-size: 22px;
+          width: 85%;
         }
 
         .project-btn {
