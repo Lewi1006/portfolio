@@ -12,44 +12,53 @@
         <div class="contact-field">
           <label for="name">Name</label>
           <input id="name" type="text" formControlName="name" placeholder="Your name" />
+          <div class="form-error-wrapper">
+            @if (name?.touched && name?.invalid) {
+              <p class="form-error">Please enter your name!</p>
+            }
+          </div>
         </div>
 
         <div class="contact-field">
           <label for="email">Email</label>
           <input id="email" type="email" formControlName="email" placeholder="Your email" />
+          <div class="form-error-wrapper">
+            @if (email?.touched && email?.invalid) {
+              <p class="form-error">Please enter a valid email!</p>
+            }
+          </div>
         </div>
 
         <div class="contact-field contact-field-message">
           <label for="message">Message</label>
           <textarea id="message" formControlName="message" placeholder="Your message"></textarea>
+          <div class="form-error-wrapper">
+            @if (message?.touched && message?.invalid) {
+              <p class="form-error">Please enter a message!</p>
+            }
+          </div>
         </div>
 
         <div class="contact-consent">
-          <input id="privacy" type="checkbox" formControlName="privacy" />
-          <label for="privacy">
-            I've read the <span>privacy policy</span> and agree to the processing of my data as
-            outlined.
-          </label>
+          <div class="privacy-wrapper">
+            <input id="privacy" type="checkbox" formControlName="privacy" />
+            <label for="privacy">
+              I've read the <span>privacy policy</span> and agree to the processing of my data as
+              outlined.
+            </label>
+          </div>
+          <div>
+            <div class="form-error-wrapper">
+              @if (privacy?.touched && privacy?.invalid) {
+                <p class="form-error">Please agree to the privacy policy!</p>
+              }
+            </div>
+          </div>
         </div>
 
-        <button class="contact-btn" type="submit" [disabled]="contactForm.invalid">Send message</button>
-
-
-        @if(name?.touched && name?.invalid){
-          <p>Please enter your name!</p>
-        }
-
-        @if(email?.touched && email?.invalid){
-          <p>Please enter a valid email!</p>
-        }
-
-        @if(message?.touched && message?.invalid){
-          <p>Please enter a message!</p>
-        }
-
-        @if(privacy?.touched && privacy?.invalid){
-          <p>Please agree to the privacy policy!</p>
-        }
+        <button class="contact-btn" type="submit" [disabled]="contactForm.invalid">
+          Send message
+        </button>
       </form>
     </div>
   </div>
