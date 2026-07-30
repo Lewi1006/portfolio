@@ -25,7 +25,7 @@
   .contact-form {
     width: 50%;
     @include d-flex(column, flex-start, center, 40px);
-
+    color: $beige-bg;
     .contact-form-headline {
       width: 100%;
       @include d-flex(column, center, center, 10px);

@@ -3,7 +3,7 @@
     <div class="contact-wrapper">
       <h2>Say Hi!</h2>
 
-      <form class="contact-form">
+      <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="formSubmit()">
         <div class="contact-form-headline">
           <h3>Want to discuss a new project?</h3>
           <p>Say hello! let's discuss your ideas and make it happen</p>
@@ -11,28 +11,45 @@
 
         <div class="contact-field">
           <label for="name">Name</label>
-          <input id="name" type="text" name="name" placeholder="Your name" />
+          <input id="name" type="text" formControlName="name" placeholder="Your name" />
         </div>
 
         <div class="contact-field">
           <label for="email">Email</label>
-          <input id="email" type="email" name="email" placeholder="Your email" />
+          <input id="email" type="email" formControlName="email" placeholder="Your email" />
         </div>
 
         <div class="contact-field contact-field-message">
           <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Your message"></textarea>
+          <textarea id="message" formControlName="message" placeholder="Your message"></textarea>
         </div>
 
         <div class="contact-consent">
-          <input id="privacy" type="checkbox" name="privacy" />
+          <input id="privacy" type="checkbox" formControlName="privacy" />
           <label for="privacy">
             I've read the <span>privacy policy</span> and agree to the processing of my data as
             outlined.
           </label>
         </div>
 
-        <button class="contact-btn" type="submit">Send message</button>
+        <button class="contact-btn" type="submit" [disabled]="contactForm.invalid">Send message</button>
+
+
+        @if(name?.touched && name?.invalid){
+          <p>Please enter your name!</p>
+        }
+
+        @if(email?.touched && email?.invalid){
+          <p>Please enter a valid email!</p>
+        }
+
+        @if(message?.touched && message?.invalid){
+          <p>Please enter a message!</p>
+        }
+
+        @if(privacy?.touched && privacy?.invalid){
+          <p>Please agree to the privacy policy!</p>
+        }
       </form>
     </div>
   </div>
