@@ -1,17 +1,68 @@
 <header class="header">
   <div class="content">
-    <div class="header__wrapper">
-      <a class="header__logo" href="/"> [LW] </a>
+    <div class="header-wrapper">
+      <a class="header-logo" href="/"> [LW] </a>
 
-      <div class="header__navigation">
-        <div class="header__lang">
-          <button class="header__lang-btn header__lang-btn--active" type="button">EN</button>
-          <button class="header__lang-btn" type="button">DE</button>
+      <div class="navigation">
+        <div class="lang">
+          <button class="lang-btn lang-btn--active" type="button">EN</button>
+          <button class="lang-btn" type="button">DE</button>
         </div>
-        <button class="header__menu" type="button" aria-label="Open menu">
-          <img src="assets/icons/burger_menu.svg" alt="burger menu" />
-        </button>
+
+        @if (menuOpen) {
+          <button class="nav-menu" type="button" (click)="closeMenu()">
+            <img src="assets/icons/close.svg" alt="Close menu" />
+          </button>
+        } @else {
+          <button class="nav-menu" type="button" (click)="openMenu()">
+            <img src="assets/icons/burger_menu.svg" alt="Open menu" />
+          </button>
+        }
       </div>
     </div>
+
+    @if (menuOpen) {
+      <div class="menu-overlay">
+        <nav class="overlay-navigation">
+          <ul>
+            <li>
+              <a class="nav-link" routerLink="/" fragment="about" (click)="closeMenu()">About me</a>
+            </li>
+            <li>
+              <a class="nav-link" routerLink="/" fragment="skills" (click)="closeMenu()"
+                >My skills</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" routerLink="/" fragment="portfolio" (click)="closeMenu()"
+                >Portfolio</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div>
+          <div class="overlay-left">
+            <h2>Say Hi</h2>
+            <p>test@email.com</p>
+          </div>
+
+          <div class="overlay-right">
+            <ul class="overlay-socials">
+              <li>
+                <a href="/"><img src="assets/icons/github_btn.svg" alt="" /></a>
+              </li>
+              <li>
+                <a href="/"><img src="assets/icons/mail_btn.svg" alt="" /></a>
+              </li>
+              <li>
+                <a href="/"><img src="assets/icons/linkedin_btn.svg" alt="" /></a>
+              </li>
+            </ul>
+          </div>
+          <img src="assets/img/rectangle_menu.svg" alt="black triangle shape">
+        </div>
+      </div>
+    }
   </div>
 </header>

@@ -4,45 +4,57 @@
 .header {
   width: 100%;
   height: 90px;
+}
 
-  &__wrapper {
-    width: 100%;
-    height: 90px;
-    @include d-flex(row, center, space-between, 0);
-  }
+.header-wrapper {
+  width: 100%;
+  height: 90px;
+  @include d-flex(row, center, space-between, 0);
 
-  &__logo {
+  .header-logo {
     font-family: $font-headline;
     font-weight: 800;
     font-size: 36px;
     letter-spacing: -4px;
   }
 
-  &__navigation {
-     @include d-flex(row, center, center, 60px);
-  }
+  .navigation {
+    @include d-flex(row, center, center, 60px);
 
-  &__lang {
-     @include d-flex(row, center, center, 16px);
-  }
+    .lang {
+      @include d-flex(row, center, center, 16px);
 
-  &__lang-btn {
-    font-family: $font-headline;
-    font-weight: 700;
-    font-size: 16px;
-    cursor: pointer;
+      .lang-btn {
+        font-family: $font-headline;
+        font-weight: 700;
+        font-size: 16px;
+        cursor: pointer;
 
-    &--active {
-      border: 3px solid $blue;
-      padding: 4px 6px;
+        &.lang-btn--active {
+          border: 3px solid $blue;
+          padding: 4px 6px;
+        }
+      }
+    }
+    .nav-menu {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      img {
+        height: 32px;
+        width: auto;
+      }
     }
   }
+}
 
-  &__menu {
-    cursor: pointer;
-    img {
-      height: 32px;
-      width: auto;
-    }
-  }
+.menu-overlay {
+  width: 100%;
+  height: calc(100dvh - 90px);
+  background-color: $beige;
+  border: red solid 5px;
+  position: fixed;
+  top: 90px;
+  right: 0;
+  z-index: 20;
 }
