@@ -3,12 +3,15 @@
 .contact {
   width: 100%;
   padding-top: 120px;
+  background-image: url('/assets/img/rectangle_bg.svg');
+  background-position: center-bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .contact-wrapper {
-    width: 100%;
-    @include d-flex(column, center, center, 60px);
-    background-color: $black-bg;
+  width: 100%;
+  @include d-flex(column, center, center, 60px);
 
   h2 {
     width: 100%;
@@ -58,14 +61,6 @@
         font-size: 20px;
         border-bottom: 2px solid $beige-bg;
         color: $font-color-light;
-      }
-
-      img {
-        position: absolute;
-        right: 10px;
-        bottom: 10px;
-        width: 12px;
-        height: auto;
       }
     }
 
