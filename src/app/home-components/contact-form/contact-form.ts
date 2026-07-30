@@ -33,7 +33,7 @@ export class ContactForm {
 
   formSubmit() {
     if (this.contactForm.valid) {
-      this.contactForm.value;
+      console.log(this.contactForm.value);
     }
   }
 }
