@@ -3,12 +3,15 @@
 .contact {
   width: 100%;
   padding-top: 120px;
+  background-image: url('/assets/img/rectangle_bg.svg');
+  background-position: center-bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .contact-wrapper {
   width: 100%;
   @include d-flex(column, center, center, 60px);
-  background-color: $black;
 
   h2 {
     width: 100%;
@@ -22,7 +25,7 @@
   .contact-form {
     width: 50%;
     @include d-flex(column, flex-start, center, 40px);
-
+    color: $beige-bg;
     .contact-form-headline {
       width: 100%;
       @include d-flex(column, center, center, 10px);
@@ -55,17 +58,12 @@
       textarea {
         width: 100%;
         height: 200px;
+        resize: vertical;
+        min-height: 200px;
+        max-height: 400px;
         font-size: 20px;
         border-bottom: 2px solid $beige;
         color: $beige;
-      }
-
-      img {
-        position: absolute;
-        right: 10px;
-        bottom: 10px;
-        width: 12px;
-        height: auto;
       }
     }
 
