@@ -10,41 +10,16 @@
       </div>
 
       <div class="ref-card-wrapper">
-        <div class="ref-card">
-          <img src="assets/icons/quotation.svg" alt="/" />
-          <div class="ref-card-title">
-            <h3>Name</h3>
-            <p>Role</p>
+      @for (currentRef of reference; track currentRef.id) {
+          <div class="ref-card">
+            <img [src]= "currentRef.img" [alt]="'quotation marks'" />
+            <div class="ref-card-title">
+              <h3>{{currentRef.name}}</h3>
+              <p>{{currentRef.role}}</p>
+            </div>
+            <p class="ref-card-text">{{currentRef.text}}</p>
           </div>
-          <p class="ref-card-text">
-            Michael really kept the team together with his great organization and clear
-            communication. We wouldn't have got this far without his commitment.
-          </p>
-        </div>
-
-        <div class="ref-card">
-          <img src="assets/icons/quotation.svg" alt="/" />
-          <div class="ref-card-title">
-            <h3>Name</h3>
-            <p>Role</p>
-          </div>
-          <p class="ref-card-text">
-            Michael really kept the team together with his great organization and clear
-            communication. We wouldn't have got this far without his commitment.
-          </p>
-        </div>
-        
-        <div class="ref-card">
-          <img src="assets/icons/quotation.svg" alt="/" />
-          <div class="ref-card-title">
-            <h3>Name</h3>
-            <p>Role</p>
-          </div>
-          <p class="ref-card-text">
-            Michael really kept the team together with his great organization and clear
-            communication. We wouldn't have got this far without his commitment.
-          </p>
-        </div>
+        }
       </div>
     </div>
   </div>
