@@ -1,67 +1,82 @@
 @use '../../../../public/styles/index' as *;
 
 .about {
-  padding: 100px 0;
-  &__wrapper {
-    @include d-flex(column, center, center, 60px);
+  padding: 100px 0 0 0;
+}
 
-    h2 {
-      width: 100%;
-      font-family: $font-headline;
-      font-weight: 800;
-      font-size: 78px;
-      line-height: 100%;
-    }
+.about-wrapper {
+  @include d-flex(column, center, center, 60px);
+
+  h2 {
+    width: 100%;
+    font-family: $font-headline;
+    font-weight: 800;
+    font-size: 78px;
+    line-height: 100%;
   }
 
-  &__content {
+  .about-content {
     width: 100%;
     @include d-flex(row, flex-start, space-between);
-  }
 
-  &__text {
-    width: 50%;
-    @include d-flex(column, center, center, 60px);
+    .about-text {
+      width: 50%;
+      @include d-flex(column, center, center, 60px);
 
-    p {
-      font-size: 22px;
-      line-height: 120%;
+      p {
+        font-size: 22px;
+        line-height: 120%;
+      }
+
+      .about-details {
+        width: 100%;
+        @include d-flex(column, flex-start, center, 24px);
+
+        .about-detail {
+          @include d-flex(row, center, center, 16px);
+
+          img {
+            width: 40px;
+            height: auto;
+          }
+          p {
+            font-size: 22px;
+            line-height: 120%;
+          }
+        }
+      }
+
+      .about-button {
+        font-size: 24px;
+        line-height: 120%;
+        padding: 12px 30px;
+        border: solid 4px black;
+      }
+    }
+
+    .about-img {
+      width: 50%;
+      text-align: right;
+
+      img {
+        height: 500px;
+        width: 500px;
+        object-fit: cover;
+      }
     }
   }
 
-  &__details {
-    width: 100%;
-    @include d-flex(column, flex-start, center, 24px);
-  }
+}
 
-  &__detail {
-    @include d-flex(row, center, center, 16px);
+.arrow-left{
+  width: 100%;
+  height: 300px;
+  padding-right: 20px;
 
-    img {
-      width: 40px;
-      height: auto;
-    }
-    p {
-      font-size: 22px;
-      line-height: 120%;
-    }
-  }
+  @include d-flex (row, flex-end, flex-end);
 
-  &__button {
-    font-size: 24px;
-    line-height: 120%;
-    padding: 12px 30px;
-    border: solid 4px black;
-  }
-
-  &__img {
-    width: 50%;
-    text-align: right;
-
-    img {
-      height: 500px;
-      width: 500px;
-      object-fit: cover;
-    }
+  img{
+    height: 100%;
+    width: fit-content;
   }
 }
