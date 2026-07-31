@@ -1,8 +1,5 @@
 @use '../../../../public/styles/index' as *;
 
-.portfolio {
-  padding: 160px 0;
-}
 
 .portfolio-wrapper {
   @include d-flex(column, center, center, 100px);
