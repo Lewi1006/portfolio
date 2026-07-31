@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { PrivacyPolicy } from './pages/privacy-policy/privacy-policy';
 import { Home } from './pages/home/home';
-import { Impressum } from './pages/impressum/impressum';
+import { LegalNotice } from './pages/legal-notice/legal-notice';
 
 export const routes: Routes = [
   {
@@ -9,8 +9,8 @@ export const routes: Routes = [
     component: Home,
   },
   {
-    path: 'impressum',
-    component: Impressum,
+    path: 'legal-notice',
+    component: LegalNotice,
   },
   {
     path: 'privacy-policy',

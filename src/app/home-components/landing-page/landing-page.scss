@@ -1,6 +1,7 @@
 @use '../../../../public/styles/index' as *;
 
 .landing {
+  padding-top: 100px;
   &__wrapper {
     @include d-flex(column, center, center, 40px);
   }
