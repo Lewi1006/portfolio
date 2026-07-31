@@ -9,7 +9,7 @@
 .header-wrapper {
   width: 100%;
   height: 90px;
-  @include d-flex(row, center, space-between, 0);
+  @include d-flex(row, center, space-between);
 
   .header-logo {
     font-family: $font-headline;
@@ -57,4 +57,80 @@
   top: 90px;
   right: 0;
   z-index: 20;
+
+  @include d-flex(column, center, center);
+
+  .overlay-navigation {
+    flex: 1;
+    @include d-flex(column, center, center);
+
+    height: fit-content;
+    width: 100%;
+
+    ul {
+      @include d-flex(column, center, center, 50px);
+
+      li {
+        width: 580px;
+        padding: 10px 20px;
+        text-align: center;
+        .nav-link {
+          font-family: $font-headline;
+          font-weight: 700;
+          font-size: 96px;
+        }
+      }
+
+      li::before {
+        content: '';
+        position: absolute;
+
+        left: 0;
+        bottom: 0;
+
+        width: 20px;
+        height: 30px;
+
+        border-left: 3px solid $black;
+        border-bottom: 3px solid $black;
+      }
+    }
+  }
+
+  .overlay-footer {
+    width: 100%;
+    height: 300px;
+    background-image: url('/assets/img/rectangle_menu.svg');
+    background-repeat: no-repeat;
+    background-position: center-bottom;
+    background-size: cover;
+    padding: 0 50px 50px 50px;
+
+    @include d-flex(row, flex-end, space-between);
+
+    .overlay-left {
+      color: white;
+      h2 {
+        font-family: $font-headline;
+        font-size: 78px;
+        font-weight: 800;
+      }
+
+      p {
+        font-size: 22px;
+      }
+    }
+
+    .overlay-right {
+      ul {
+        @include d-flex(row, center, center, 20px);
+        li {
+          a img {
+            width: 40px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
 }
