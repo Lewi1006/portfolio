@@ -1,55 +1,58 @@
 @use '../../../../public/styles/index' as *;
 
 .skills {
-  &__frame {
+}
+
+.skills-wrapper {
+  width: 100%;
+  padding-bottom: 100px;
+  @include d-flex(column, center, center, 60px);
+
+  .skills-frame {
     position: absolute;
     top: 40px;
+    left: 0;
     width: 100%;
     height: 600px;
     border: 4px solid black;
   }
 
-  &__wrapper {
-    width: 100%;
-    @include d-flex(column, center, center, 60px);
-
-    h2 {
-      font-family: $font-headline;
-      font-weight: 800;
-      font-size: 78px;
-      line-height: 100%;
-      background-color: $beige;
-    }
+  h2 {
+    font-family: $font-headline;
+    font-weight: 800;
+    font-size: 78px;
+    line-height: 100%;
+    background-color: $beige;
   }
 
-  &__content {
+  .skills-content {
     @include d-flex(column, center, center, 36px);
-  }
 
-  &__icons {
-    width: 1000px;
-    @include d-flex(row, center, center, 80px);
-    flex-wrap: wrap;
-  }
+    .skills-icons {
+      width: 1000px;
+      @include d-flex(row, center, center, 80px);
+      flex-wrap: wrap;
 
-  &__icon {
-    width: 120px;
-    @include d-flex(column, center, center, 14px);
+      .skills-icon {
+        width: 120px;
+        @include d-flex(column, center, center, 14px);
 
-    img {
-      width: 75px;
-      height: auto;
+        img {
+          width: 75px;
+          height: auto;
+        }
+
+        p {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 120%;
+          text-align: center;
+        }
+      }
     }
-
-    p {
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 120%;
-      text-align: center;
-    }
   }
 
-  &__contact {
+  .skills-contact {
     @include d-flex(row, center, center, 24px);
 
     img {
@@ -68,15 +71,14 @@
   }
 }
 
-
-.arrow-right{
+.arrow-right {
   width: 100%;
   height: 300px;
   padding-right: 20px;
 
-  @include d-flex (row, flex-end, flex-end);
+  @include d-flex(row, flex-end, flex-end);
 
-  img{
+  img {
     height: 100%;
     width: fit-content;
   }
