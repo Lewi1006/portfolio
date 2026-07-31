@@ -12,9 +12,11 @@ export class Header {
 
   openMenu() {
     this.menuOpen = true;
+    document.body.classList.add('menu-open');
   }
 
   closeMenu() {
     this.menuOpen = false;
+    document.body.classList.remove('menu-open');
   }
 }
