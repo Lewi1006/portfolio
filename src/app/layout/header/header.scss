@@ -28,6 +28,20 @@
     .lang {
       @include d-flex(row, center, center, 16px);
 
+      @include respond-max(m) {
+        display: none;
+      }
+
+      &.lang-mobile {
+        @include respond-max(m) {
+          @include d-flex(row, center, center, 16px);
+
+          .lang-btn {
+            font-size: 24px;
+          }
+        }
+      }
+
       .lang-btn {
         font-family: $font-headline;
         font-weight: 700;
@@ -40,6 +54,7 @@
         }
       }
     }
+
     .nav-menu {
       width: 40px;
       height: 40px;
