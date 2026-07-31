@@ -3,20 +3,16 @@
 
 .header {
   width: 100%;
-  height: 90px;
+  height: $header-height;
   background-color: $beige;
   position: fixed;
   top: 0;
   z-index: 100;
-
-  @include respond(sm){
-    height: 20px;
-  };
 }
 
 .header-wrapper {
   width: 100%;
-  height: 90px;
+  height: $header-height;
   @include d-flex(row, center, space-between);
 
   .header-logo {
@@ -58,10 +54,10 @@
 
 .menu-overlay {
   width: 100%;
-  height: calc(100dvh - 90px);
+  height: calc(100dvh - $header-height);
   background-color: $beige;
   position: fixed;
-  top: 90px;
+  top: $header-height;
   right: 0;
   z-index: 20;
 
