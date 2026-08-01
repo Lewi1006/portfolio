@@ -1,0 +1,46 @@
+@use '../../../../public/styles/index' as *;
+
+.legal-notice {
+  padding: 0 140px 80px 140px;
+}
+
+.legal-notice-wrapper {
+  @include d-flex(column, flex-start, center, 40px);
+  h1 {
+    font-family: $font-headline;
+    font-weight: 800;
+    font-size: 78px;
+  }
+
+  .legal-content {
+    @include d-flex(column, flex-start, center, 20px);
+    .legal-details {
+      @include d-flex(column, flex-start, center, 10px);
+      h2 {
+        color: $blue;
+        font-weight: 800;
+        font-size: 24px;
+      }
+
+      ul {
+        padding-left: 30px;
+        li {
+          list-style: disc;
+        }
+      }
+    }
+
+    .legal-paragraph {
+      h3 {
+        color: $blue;
+        font-weight: 700;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.highlight {
+  color: $blue;
+}
+
