@@ -1,4 +1,4 @@
-@use '../public/styles/index'as * ;
+@use '../public/styles/index' as *;
 
 * {
   margin: 0;
@@ -18,6 +18,14 @@
 .content {
   width: 100%;
   padding: 0 max(calc(50% - 720px), 3rem);
+
+  @include respond(zero, sm) {
+    padding: 0 max(calc(50% - 720px), 1rem);
+  }
+
+  @include respond(sm, m) {
+    padding: 0 max(calc(50% - 720px), 1rem);
+  }
 }
 
 body {
