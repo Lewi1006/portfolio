@@ -15,7 +15,7 @@
     @include d-flex(column, center, center, 40px);
   }
 
-   @include respond(m, l) {
+  @include respond(m, l) {
     @include d-flex(column, center, center, 40px);
   }
 
@@ -36,7 +36,7 @@
       width: fit-content;
     }
 
-      @include respond(m,l) {
+    @include respond(m, l) {
       font-size: 72px;
       width: fit-content;
     }
@@ -149,24 +149,25 @@
 .arrow-left {
   width: 100%;
   height: 300px;
-  padding-right: 20px;
-
-  @include respond(zero, sm) {
-    height: 200px;
-    padding-right: 70px;
-    padding-top: 20px;
-  }
-
-    @include respond(m, l) {
-    height: 300px;
-    padding-right: 80px;
-    padding-top: 20px;
-  }
 
   @include d-flex(row, flex-end, flex-end);
 
-  img {
-    height: 100%;
-    width: fit-content;
+  .arrow-img {
+    width: 200px;
+    overflow: hidden;
+    @include d-flex(row, center, flex-end);
+
+    img {
+      height: 100%;
+      width: fit-content;
+    }
+  }
+
+  @include respond-max(sm) {
+    height: 200px;
+
+    .arrow-img {
+      height: 100%;
+    }
   }
 }

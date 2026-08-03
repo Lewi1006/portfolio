@@ -45,7 +45,6 @@
       flex-wrap: wrap;
 
       @include respond(zero, sm) {
-        // width: 310px;
         @include d-flex(row, center, center, clamp(30px, 5.25dvh, 50px));
       }
 
@@ -73,11 +72,8 @@
   }
 
   .skills-contact {
+     width: min(90%, 780px);
     @include d-flex(row, center, center, 24px);
-
-    @include respond-min(sm) {
-      width: min(90%, 780px);
-    }
 
     img {
       width: 75px;
