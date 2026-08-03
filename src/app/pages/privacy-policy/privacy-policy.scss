@@ -1,0 +1,28 @@
+@use '../../../../public/styles/index' as *;
+
+.privacy-policy {
+  padding: 0 140px 80px 140px;
+}
+
+.privacy-wrapper {
+  @include d-flex(column, flex-start, center, 60px);
+  h1 {
+    font-family: $font-headline;
+    font-weight: 800;
+    font-size: 78px;
+  }
+}
+
+.privacy-content {
+  @include d-flex(column, flex-start, center, 40px);
+
+  .privacy-paragraph {
+    @include d-flex(column, flex-start, center, 20px);
+    h2 {
+      color: $blue;
+      font-weight: 700;
+      font-size: 34px;
+    }
+
+  }
+}
