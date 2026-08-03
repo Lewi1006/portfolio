@@ -7,11 +7,24 @@
 }
 
 @mixin project-reversed {
+  width: 100%;
   flex-direction: row-reverse;
 
+  @include respond-max(l) {
+    @include d-flex(column-reverse, center, center);
+  }
+
   .project-img {
+    width: 50%;
+
     .img-wrapper {
+      width: 100%;
       margin: auto;
+
+       @include respond-min(desktop) {
+          width: 620px;
+        }
+
       .arrow-animation {
         left: 0;
         transform: translate(-50%, -50%);
@@ -24,10 +37,20 @@
   }
 
   .project-content {
+    width: 50%;
     align-items: flex-start;
 
     .project-count {
       text-align: left;
+    }
+  }
+
+  @include respond-max(l) {
+    flex-direction: column-reverse;
+
+    .project-img,
+    .project-content {
+      width: 100%;
     }
   }
 }

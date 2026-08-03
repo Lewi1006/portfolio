@@ -1,8 +1,11 @@
 @use '../../../../public/styles/index' as *;
 
-
 .portfolio-wrapper {
   @include d-flex(column, center, center, 100px);
+
+  @include respond(zero, sm) {
+    @include d-flex(column, center, center, 50px);
+  }
 
   .portfolio-headline {
     @include d-flex(column, center, center, 20px);
@@ -11,18 +14,38 @@
       font-weight: 800;
       font-size: 78px;
       line-height: 100%;
+
+      @include respond(zero, sm) {
+        font-size: 32px;
+      }
+
+      @include respond(sm, m) {
+        font-size: 56px;
+      }
+
+      @include respond(m, l) {
+        font-size: 72px;
+      }
     }
 
     .portfolio-intro {
-      width: 500px;
+      width: min(100%, 500px);
       font-size: 22px;
       text-align: center;
+
+      @include respond(zero, sm) {
+        font-size: 20px;
+      }
     }
   }
 
   .project {
     width: 100%;
     @include d-flex(row, flex-start, space-between);
+
+    @include respond-max(l) {
+      @include d-flex(column-reverse, center, center);
+    }
 
     &.project-reversed {
       @include project-reversed;
@@ -31,9 +54,17 @@
     .project-img {
       width: $project-column-width;
 
-      .img-wrapper {
-        width: $project-image-width;
+      @include respond-max(l) {
+        width: 100%;
+      }
 
+      .img-wrapper {
+        width: 100%;
+
+        @include respond-min(desktop) {
+          width: $project-image-width;
+        }
+        
         img {
           width: 100%;
           height: auto;
@@ -68,12 +99,25 @@
       width: $project-column-width;
       @include d-flex(column, flex-end, flex-start, 26px);
 
+      @include respond-max(l) {
+        width: 100%;
+      }
+
       .project-count {
         font-family: $font-headline;
         font-weight: 700;
         font-size: 48px;
         line-height: 120%;
         text-align: right;
+
+        @include respond-max(desktop) {
+        padding-bottom: 20px;
+      }
+
+        @include respond-max(m) {
+          font-size: 22px;
+          
+        }
       }
 
       .project-details {
