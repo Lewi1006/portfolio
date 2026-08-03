@@ -38,7 +38,7 @@
       }
 
       @include respond(sm, m) {
-        font-size: 46px;
+        font-size: clamp(46px, 10dvh, 64px);
       }
 
       @include respond(m, l) {
