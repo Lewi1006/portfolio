@@ -7,25 +7,72 @@
 .about-wrapper {
   @include d-flex(column, center, center, 60px);
 
+  @include respond(zero, sm) {
+    @include d-flex(column, center, center, 20px);
+  }
+
+  @include respond(sm, m) {
+    @include d-flex(column, center, center, 40px);
+  }
+
+   @include respond(m, l) {
+    @include d-flex(column, center, center, 40px);
+  }
+
   h2 {
     width: 100%;
     font-family: $font-headline;
     font-weight: 800;
     font-size: 78px;
     line-height: 100%;
+
+    @include respond(zero, sm) {
+      font-size: 32px;
+      width: fit-content;
+    }
+
+    @include respond(sm, m) {
+      font-size: 64px;
+      width: fit-content;
+    }
+
+      @include respond(m,l) {
+      font-size: 72px;
+      width: fit-content;
+    }
   }
 
   .about-content {
     width: 100%;
     @include d-flex(row, flex-start, space-between);
 
+    @include respond(zero, sm) {
+      @include d-flex(column, center, center, 30px);
+    }
+
+    @include respond(sm, m) {
+      @include d-flex(column, center, center, 60px);
+    }
+
+    @include respond(m, l) {
+      @include d-flex(column, center, center, 60px);
+    }
+
     .about-text {
       width: 50%;
       @include d-flex(column, center, center, 60px);
 
+      @include respond-max(l) {
+        width: 100%;
+      }
+
       p {
         font-size: 22px;
         line-height: 120%;
+
+        @include respond-max(sm) {
+          font-size: 20px;
+        }
       }
 
       .about-details {
@@ -38,10 +85,18 @@
           img {
             width: 40px;
             height: auto;
+
+            @include respond-max(sm) {
+              width: 30px;
+            }
           }
           p {
             font-size: 22px;
             line-height: 120%;
+
+            @include respond-max(sm) {
+              font-size: 20px;
+            }
           }
         }
       }
@@ -51,6 +106,10 @@
         line-height: 120%;
         padding: 12px 30px;
         border: solid 4px black;
+
+        @include respond-max(sm) {
+          font-size: 20px;
+        }
       }
     }
 
@@ -58,24 +117,55 @@
       width: 50%;
       text-align: right;
 
+      @include respond(zero, sm) {
+        width: 100%;
+        @include d-flex(row, center, center);
+      }
+
+      @include respond(sm, l) {
+        width: 100%;
+        @include d-flex(row, center, center);
+      }
+
       img {
         height: 500px;
         width: 500px;
         object-fit: cover;
+
+        @include respond(zero, sm) {
+          height: clamp(250px, 35dvh, 350px);
+          width: clamp(250px, 35dvh, 350px);
+        }
+
+        @include respond(sm, l) {
+          height: 500px;
+          width: 500px;
+        }
       }
     }
   }
-
 }
 
-.arrow-left{
+.arrow-left {
   width: 100%;
   height: 300px;
   padding-right: 20px;
 
-  @include d-flex (row, flex-end, flex-end);
+  @include respond(zero, sm) {
+    height: 200px;
+    padding-right: 70px;
+    padding-top: 20px;
+  }
 
-  img{
+    @include respond(m, l) {
+    height: 300px;
+    padding-right: 80px;
+    padding-top: 20px;
+  }
+
+  @include d-flex(row, flex-end, flex-end);
+
+  img {
     height: 100%;
     width: fit-content;
   }
