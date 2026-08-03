@@ -2,11 +2,24 @@
 
 .landing {
   padding-top: 100px;
-  &__wrapper {
-    @include d-flex(column, center, center, 40px);
+
+  @include respond(zero, sm) {
+    padding-top: 80px;
+  }
+}
+
+.landing-wrapper {
+  @include d-flex(column, center, center, 40px);
+
+  @include respond(zero, sm) {
+    @include d-flex(column, center, center, 120px);
   }
 
-  &__headline {
+  @include respond(sm, m) {
+    @include d-flex(column, center, center, 120px);
+  }
+
+  .landing-headline {
     width: 100%;
     @include d-flex(column, center, center, 20px);
 
@@ -18,52 +31,112 @@
       line-height: 100%;
       letter-spacing: $text-tighter;
       text-align: center;
+      @include d-flex(column, center, center);
+
+      @include respond(zero, sm) {
+        font-size: 36px;
+      }
+
+      @include respond(sm, m) {
+        font-size: 46px;
+      }
+
+      @include respond(m, l) {
+        font-size: 90px;
+      }
+    }
+
+    .landing-subheading {
+      @include d-flex(row, center, center, 20px);
+      width: 100%;
+
+        @include respond(zero, sm) {
+          @include d-flex(row, center, center, 8px);
+        }
+
+      .landing-line {
+        width: 630px;
+        height: 4px;
+        background-color: $black;
+        flex-shrink: 1;
+
+        @include respond(zero, sm) {
+          width: clamp(65px, 8.5dvh, 75px);
+          height: 2px;
+        }
+
+        @include respond(sm, m) {
+          width: 120px;
+          height: 3px;
+        }
+
+        @include respond(m, l) {
+          width: 370px;
+          height: 3px;
+        }
+      }
+
+      p {
+        font-weight: 700;
+        color: $blue;
+        font-size: 60px;
+        line-height: 100%;
+        letter-spacing: $text-tighter;
+
+        @include respond(zero, sm) {
+          font-size: 30px;
+        }
+
+        @include respond(sm, m) {
+          font-size: 44px;
+        }
+
+        @include respond(m, l) {
+          font-size: 52px;
+        }
+      }
     }
   }
 
-  &__subheading {
-    @include d-flex(row, center, center, 20px);
-
-    img {
-      width: 650px;
-      height: auto;
-    }
-
-    p {
-      font-weight: 700;
-      color: $blue;
-      font-size: 60px;
-      line-height: 100%;
-      letter-spacing: $text-tighter;
-    }
-  }
-
-  &__content {
+  .landing-content {
     width: 100%;
     @include d-flex(row, flex-end, space-between);
-  }
 
-  &__email {
-    font-size: 22px;
-    font-weight: 300;
-    line-height: 100%;
-    text-align: center;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-  }
-
-  &__scroll {
-    @include d-flex(column, center, center, 12px);
-
-    img {
-      height: 200px;
-      width: auto;
-    }
-
-    p {
+    .landing-email {
       font-size: 22px;
       font-weight: 300;
       line-height: 100%;
+      text-align: center;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+
+      @include respond(zero, sm) {
+        font-size: 20px;
+      }
+    }
+
+    .landing-scroll {
+      @include d-flex(column, center, center, 12px);
+
+      img {
+        height: 200px;
+        width: auto;
+
+        @include respond(zero, sm) {
+          height: auto;
+          width: 96px;
+        }
+      }
+
+      p {
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 100%;
+
+        @include respond(zero, sm) {
+          font-size: 20px;
+        }
+      }
     }
   }
 }
