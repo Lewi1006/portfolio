@@ -64,7 +64,7 @@
         @include respond-min(desktop) {
           width: $project-image-width;
         }
-        
+
         img {
           width: 100%;
           height: auto;
@@ -111,17 +111,20 @@
         text-align: right;
 
         @include respond-max(desktop) {
-        padding-bottom: 20px;
-      }
+          padding-bottom: 20px;
+        }
 
         @include respond-max(m) {
           font-size: 22px;
-          
         }
       }
 
       .project-details {
         display: none;
+
+        @include respond-max(l) {
+          @include d-flex(column, flex-start, center, 16px);
+        }
 
         h3 {
           font-family: $font-headline;
