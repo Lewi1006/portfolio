@@ -13,6 +13,11 @@
   width: 100%;
   @include d-flex(column, center, center, 60px);
 
+  @include respond-max(sm) {
+    @include d-flex(column, center, center, 30px);
+    padding-bottom: 40px;
+  }
+
   h2 {
     width: 100%;
     font-family: $font-headline;
@@ -20,12 +25,29 @@
     font-weight: 800;
     font-size: 78px;
     line-height: 100%;
+
+    @include respond(zero, sm) {
+      font-size: 32px;
+    }
+
+    @include respond(sm, m) {
+      font-size: clamp(48px, 8vw, 56px);
+    }
+
+    @include respond(m, l) {
+      font-size: 72px;
+    }
   }
 
   .contact-form {
     width: 50%;
     @include d-flex(column, flex-start, center, 20px);
     color: $beige;
+
+    @include respond-max(l) {
+      width: 90%;
+    }
+
     .contact-form-headline {
       width: 100%;
       @include d-flex(column, center, center, 10px);
@@ -33,10 +55,18 @@
         font-weight: 700;
         color: $blue;
         font-size: 32px;
+
+        @include respond(zero, sm) {
+          font-size: 24px;
+        }
       }
       p {
         font-size: 22px;
         color: $beige;
+
+        @include respond(zero, sm) {
+          font-size: 18px;
+        }
       }
     }
 
