@@ -45,7 +45,7 @@
       flex-wrap: wrap;
 
       @include respond(zero, sm) {
-        @include d-flex(row, center, center, clamp(30px, 5.25dvh, 50px));
+        @include d-flex(row, center, center, 25px);
       }
 
       .skills-icon {
