@@ -14,16 +14,23 @@
     @include d-flex(column-reverse, center, center);
   }
 
+  .project-count {
+    width: 15%;
+    text-align: left;
+    top: 0px;
+    left: 0px;
+  }
+
   .project-img {
     width: 50%;
+    @include d-flex(row, flex-start, flex-end);
 
     .img-wrapper {
       width: 100%;
-      margin: auto;
-
-       @include respond-min(desktop) {
-          width: 620px;
-        }
+      
+      @include respond-min(desktop) {
+        width: 620px;
+      }
 
       .arrow-animation {
         left: 0;
@@ -40,9 +47,6 @@
     width: 50%;
     align-items: flex-start;
 
-    .project-count {
-      text-align: left;
-    }
   }
 
   @include respond-max(l) {

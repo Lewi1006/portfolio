@@ -51,12 +51,32 @@
       @include project-reversed;
     }
 
-    .project-img {
-      width: $project-column-width;
+    .project-count {
+      width: 15%;
+      font-family: $font-headline;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 120%;
+      text-align: right;
+      position: absolute;
+      top: 0;
+      right: 0;
 
-      @include respond-max(l) {
-        width: 100%;
+      @include respond-max(desktop) {
+        padding-bottom: 20px;
       }
+
+      @include respond-max(m) {
+        font-size: 22px;
+      }
+    }
+
+    .project-img {
+      width: min(100%, $project-image-width);
+
+      // @include respond-max(l) {
+      //   width: 100%;
+      // }
 
       .img-wrapper {
         width: 100%;
@@ -97,26 +117,11 @@
 
     .project-content {
       width: $project-column-width;
-      @include d-flex(column, flex-end, flex-start, 26px);
+      align-self: flex-end;
+      padding-bottom: 40px;
 
       @include respond-max(l) {
         width: 100%;
-      }
-
-      .project-count {
-        font-family: $font-headline;
-        font-weight: 700;
-        font-size: 48px;
-        line-height: 120%;
-        text-align: right;
-
-        @include respond-max(desktop) {
-          padding-bottom: 20px;
-        }
-
-        @include respond-max(m) {
-          font-size: 22px;
-        }
       }
 
       .project-details {
