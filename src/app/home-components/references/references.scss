@@ -1,8 +1,8 @@
 @use '../../../../public/styles/index' as *;
 
 .ref {
-    width: 100%;
-    padding-top: 100px;
+  width: 100%;
+  padding-top: 100px;
 }
 
 .ref-wrapper {
@@ -16,18 +16,38 @@
       font-weight: 800;
       font-size: 78px;
       line-height: 100%;
+
+      @include respond(zero, sm) {
+        font-size: 32px;
+      }
+
+      @include respond(sm, m) {
+        font-size: clamp(48px, 8vw, 56px);
+      }
+
+      @include respond(m, l) {
+        font-size: 72px;
+      }
     }
 
     .ref-intro {
-      width: 650px;
+      width: min(100%, 650px);
       font-size: 22px;
       text-align: center;
+
+      @include respond(zero, sm) {
+        font-size: 20px;
+      }
     }
   }
 
   .ref-card-wrapper {
     width: 100%;
     @include d-flex(row, center, center, 30px);
+
+    @include respond-max(m) {
+      @include d-flex(column, center, center, 30px);
+    }
 
     .ref-card {
       width: 400px;
@@ -36,6 +56,14 @@
       border: solid black 4px;
       padding: 36px 16px;
       @include d-flex(column, center, flex-start, 20px);
+
+      @include respond(zero, sm) {
+        width: 300px;
+      }
+
+      @include respond(m, l) {
+        min-height: 445px;
+      }
 
       img {
         width: 40px;
@@ -60,15 +88,14 @@
   }
 }
 
-
-.arrow-left{
+.arrow-left {
   width: 100%;
   height: 300px;
   padding-right: 20px;
 
-  @include d-flex (row, flex-end, flex-end);
+  @include d-flex(row, flex-end, flex-end);
 
-  img{
+  img {
     height: 100%;
     width: fit-content;
   }
