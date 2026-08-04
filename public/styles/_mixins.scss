@@ -7,61 +7,47 @@
 }
 
 @mixin project-reversed {
-  width: 100%;
-  flex-direction: row-reverse;
+  @include respond-min(l) {
+    flex-direction: row-reverse;
 
-  @include respond-max(l) {
-    @include d-flex(column-reverse, center, center);
-  }
-
-  .project-count {
-    width: 15%;
-    text-align: left;
-    top: 0px;
-    left: 0px;
-  }
-
-  .project-img {
-    width: 50%;
-    @include d-flex(row, flex-start, flex-end);
-
-    @include respond(l, desktop) {
-      width: clamp(300px, 55dvh, 620px);
+    .project-count {
+      text-align: left;
+      left: 0px;
     }
 
-    @include respond-max(l) {
-      width: 100%;
-    }
+    .project-img {
+      width: 620px;
+      @include d-flex(row, flex-start, flex-end);
 
-    .img-wrapper {
-      width: 100%;
+      // @include respond(l, desktop) {
+      //   width: clamp(300px, 55dvh, 620px);
+      // }
 
-      @include respond-min(desktop) {
-        width: 620px;
-      }
+      .img-wrapper {
+        width: 100%;
 
-      .arrow-animation {
-        left: 0;
-        transform: translate(-50%, -50%);
+        @include respond-min(desktop) {
+          width: 620px;
+        }
 
-        img {
-          transform: rotate(-45deg);
+        .arrow-animation {
+          left: 0;
+          transform: translate(-50%, -50%);
+
+          img {
+            transform: rotate(-45deg);
+          }
         }
       }
     }
-  }
 
-  .project-content {
-    width: 50%;
-    align-items: flex-start;
-  }
-
-  @include respond-max(l) {
-    flex-direction: column-reverse;
-
-    .project-img,
     .project-content {
-      width: 100%;
+      width: 50%;
+      align-items: flex-start;
+
+      .project-details{
+        padding-left: 0;
+      }
     }
   }
 }
@@ -70,8 +56,8 @@ $breakpoints: (
   zero: 0px,
   sm: 480px,
   m: 768px,
-  l: 1024px,
-  desktop: 1439px,
+  l: 1025px,
+  desktop: 1440px,
 );
 
 @mixin respond($minsize: zero, $maxsize: desktop) {
