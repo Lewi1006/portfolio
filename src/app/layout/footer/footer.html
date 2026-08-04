@@ -1,13 +1,15 @@
 <footer class="footer">
   <div class="content">
-    <div class="footer__wrapper">
-      <div class="footer__left">
-        <a class="footer__logo" href="/"> [LW] </a>
-        <a class="footer__impressum" [routerLink]="['/legal-notice']">© Leonie Wind 2026</a>
+    <div class="footer-wrapper">
+     <a class="footer-privacy-policy-mobile" [routerLink]="['/legal-notice']">Legal notice</a>
+
+      <div class="footer-left">
+        <a class="footer-logo" href="/"> [LW] </a>
+        <a class="footer-impressum" [routerLink]="['/legal-notice']">© Leonie Wind 2026</a>
       </div>
 
-      <div class="footer__right">
-        <ul class="footer__socials">
+      <div class="footer-right">
+        <ul class="footer-socials">
           <li>
             <a href="/"><img src="assets/icons/github_btn.svg" alt="" /></a>
           </li>
@@ -19,8 +21,9 @@
           </li>
         </ul>
 
-        <a class="footer__privacy-policy" [routerLink]="['/legal-notice']">Legal notice</a>
+        <a class="footer-privacy-policy" [routerLink]="['/legal-notice']">Legal notice</a>
       </div>
+
     </div>
   </div>
 </footer>
