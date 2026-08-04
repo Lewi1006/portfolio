@@ -57,6 +57,10 @@
       padding: 36px 16px;
       @include d-flex(column, center, flex-start, 20px);
 
+      @include respond(zero, sm) {
+        width: 300px;
+      }
+
       @include respond(m, l) {
         min-height: 445px;
       }
