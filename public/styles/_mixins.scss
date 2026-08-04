@@ -25,9 +25,17 @@
     width: 50%;
     @include d-flex(row, flex-start, flex-end);
 
+    @include respond(l, desktop) {
+      width: clamp(300px, 55dvh, 620px);
+    }
+
+    @include respond-max(l) {
+      width: 100%;
+    }
+
     .img-wrapper {
       width: 100%;
-      
+
       @include respond-min(desktop) {
         width: 620px;
       }
@@ -46,7 +54,6 @@
   .project-content {
     width: 50%;
     align-items: flex-start;
-
   }
 
   @include respond-max(l) {
@@ -64,7 +71,7 @@ $breakpoints: (
   sm: 480px,
   m: 768px,
   l: 1024px,
-  desktop: 1440px,
+  desktop: 1439px,
 );
 
 @mixin respond($minsize: zero, $maxsize: desktop) {

@@ -66,17 +66,25 @@
         padding-bottom: 20px;
       }
 
+      @include respond(l, desktop) {
+        font-size: 30px;
+      }
+
       @include respond-max(m) {
         font-size: 22px;
       }
     }
 
     .project-img {
-      width: min(100%, $project-image-width);
+      width: $project-image-width;
 
-      // @include respond-max(l) {
-      //   width: 100%;
-      // }
+      @include respond(l, desktop) {
+        width: clamp(300px, 55dvh, $project-image-width);
+      }
+
+      @include respond-max(l) {
+        width: 100%;
+      }
 
       .img-wrapper {
         width: 100%;
@@ -137,23 +145,39 @@
           font-size: 48px;
           line-height: 120%;
           text-align: left;
+
+          @include respond(l, desktop) {
+            font-size: 36px;
+          }
         }
 
         .project-skills {
           font-size: 28px;
           font-weight: 500;
           color: $blue;
+
+          @include respond(l, desktop) {
+            font-size: 24px;
+          }
         }
 
         .project-description {
           font-size: 22px;
           width: 85%;
+
+          @include respond(l, desktop) {
+            font-size: 20px;
+          }
         }
 
         .project-btn {
           font-size: 28px;
           border: solid black 2px;
           padding: 4px 8px;
+
+          @include respond(l, desktop) {
+            font-size: 24px;
+          }
         }
       }
     }
