@@ -7,27 +7,47 @@
 }
 
 @mixin project-reversed {
-  flex-direction: row-reverse;
-
-  .project-img {
-    .img-wrapper {
-      margin: auto;
-      .arrow-animation {
-        left: 0;
-        transform: translate(-50%, -50%);
-
-        img {
-          transform: rotate(-45deg);
-        }
-      }
-    }
-  }
-
-  .project-content {
-    align-items: flex-start;
+  @include respond-min(l) {
+    flex-direction: row-reverse;
 
     .project-count {
       text-align: left;
+      left: 0px;
+    }
+
+    .project-img {
+      width: 620px;
+      @include d-flex(row, flex-start, flex-end);
+
+      // @include respond(l, desktop) {
+      //   width: clamp(300px, 55dvh, 620px);
+      // }
+
+      .img-wrapper {
+        width: 100%;
+
+        @include respond-min(desktop) {
+          width: 620px;
+        }
+
+        .arrow-animation {
+          left: 0;
+          transform: translate(-50%, -50%);
+
+          img {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+
+    .project-content {
+      width: 50%;
+      align-items: flex-start;
+
+      .project-details{
+        padding-left: 0;
+      }
     }
   }
 }
@@ -36,7 +56,7 @@ $breakpoints: (
   zero: 0px,
   sm: 480px,
   m: 768px,
-  l: 1024px,
+  l: 1025px,
   desktop: 1440px,
 );
 

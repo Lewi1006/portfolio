@@ -1,8 +1,11 @@
 @use '../../../../public/styles/index' as *;
 
-
 .portfolio-wrapper {
   @include d-flex(column, center, center, 100px);
+
+  @include respond(zero, sm) {
+    @include d-flex(column, center, center, 50px);
+  }
 
   .portfolio-headline {
     @include d-flex(column, center, center, 20px);
@@ -11,12 +14,28 @@
       font-weight: 800;
       font-size: 78px;
       line-height: 100%;
+
+      @include respond(zero, sm) {
+        font-size: 32px;
+      }
+
+      @include respond(sm, m) {
+        font-size: 56px;
+      }
+
+      @include respond(m, l) {
+        font-size: 72px;
+      }
     }
 
     .portfolio-intro {
-      width: 500px;
+      width: min(100%, 500px);
       font-size: 22px;
       text-align: center;
+
+      @include respond(zero, sm) {
+        font-size: 20px;
+      }
     }
   }
 
@@ -24,20 +43,71 @@
     width: 100%;
     @include d-flex(row, flex-start, space-between);
 
+    @include respond-max(l) {
+      @include d-flex(column, center, center, 40px);
+    }
+
     &.project-reversed {
       @include project-reversed;
     }
 
+    .project-count {
+      width: fit-content;
+      height: fit-content;
+      font-family: $font-headline;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 120%;
+      text-align: right;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      @include respond-max(l) {
+        position: relative;
+        align-self: end;
+        width: 100%;
+      }
+
+      @include respond-max(m) {
+        font-size: 30px;
+      }
+
+      @include respond(l, desktop) {
+        font-size: 30px;
+      }
+
+      @include respond(m, l) {
+        font-size: 48px;
+      }
+    }
+
     .project-img {
-      width: $project-column-width;
+      width: $project-image-width;
+
+      // @include respond(l, desktop) {
+      //   width: clamp(300px, 55dvh, $project-image-width);
+      // }
+
+      @include respond-max(l) {
+        width: 100%;
+      }
 
       .img-wrapper {
-        width: $project-image-width;
+        width: 100%;
+
+        @include respond-min(desktop) {
+          width: $project-image-width;
+        }
 
         img {
           width: 100%;
           height: auto;
           filter: grayscale(100%);
+
+          @include respond-max(l) {
+            filter: grayscale(0%);
+          }
         }
 
         .arrow-animation {
@@ -66,18 +136,20 @@
 
     .project-content {
       width: $project-column-width;
-      @include d-flex(column, flex-end, flex-start, 26px);
+      align-self: flex-end;
+      padding-bottom: 40px;
 
-      .project-count {
-        font-family: $font-headline;
-        font-weight: 700;
-        font-size: 48px;
-        line-height: 120%;
-        text-align: right;
+      @include respond-max(l) {
+        width: 100%;
       }
 
       .project-details {
         display: none;
+        padding-left: 40px;
+
+        @include respond-max(l) {
+          @include d-flex(column, flex-start, center, 16px);
+        }
 
         h3 {
           font-family: $font-headline;
@@ -85,23 +157,73 @@
           font-size: 48px;
           line-height: 120%;
           text-align: left;
+
+          @include respond(l, desktop) {
+            font-size: 36px;
+          }
+
+          @include respond(m, l) {
+            font-size: 48px;
+          }
+
+          @include respond-max(m) {
+            font-size: 30px;
+          }
         }
 
         .project-skills {
           font-size: 28px;
           font-weight: 500;
           color: $blue;
+
+          @include respond(l, desktop) {
+            font-size: 24px;
+          }
+
+          @include respond(m, l) {
+            font-size: 24px;
+          }
+
+          @include respond-max(m) {
+            font-size: 20px;
+          }
         }
 
         .project-description {
           font-size: 22px;
           width: 85%;
+
+          @include respond(l, desktop) {
+            font-size: 20px;
+          }
+
+          @include respond(m, l) {
+            font-size: 18px;
+          }
+
+          @include respond-max(m) {
+            font-size: 16px;
+          }
         }
 
         .project-btn {
           font-size: 28px;
           border: solid black 2px;
           padding: 4px 8px;
+
+          @include respond(l, desktop) {
+            font-size: 24px;
+          }
+
+          @include respond(m, l) {
+            font-size: 18px;
+            align-self: center;
+          }
+
+          @include respond-max(m) {
+            font-size: 16px;
+            align-self: center;
+          }
         }
       }
     }
