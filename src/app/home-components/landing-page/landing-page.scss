@@ -1,14 +1,7 @@
 @use '../../../../public/styles/index' as *;
 
-.landing {
-  padding-top: 100px;
-
-  @include respond(zero, sm) {
-    padding-top: 80px;
-  }
-}
-
 .landing-wrapper {
+  min-height: calc(100dvh - 90px);
   @include d-flex(column, center, center, 40px);
 
   @include respond(zero, sm) {
