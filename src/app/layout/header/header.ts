@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { RouterLink } from "@angular/router";
+import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { TranslateService } from '../../services/language.service';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,8 @@ import { RouterLink } from "@angular/router";
   styleUrl: './header.scss',
 })
 export class Header {
+  translateService = inject(TranslateService);
+
   menuOpen = false;
 
   openMenu() {
