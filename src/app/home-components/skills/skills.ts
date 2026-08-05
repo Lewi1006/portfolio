@@ -59,5 +59,6 @@ export class Skills {
       icon: 'assets/icons/design.svg',
       name: 'Material Design',
     },
+    
   ];
 }

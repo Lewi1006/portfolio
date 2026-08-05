@@ -5,12 +5,15 @@
       <h2>My skills</h2>
       <div class="skills-content">
         <div class="skills-icons">
+
           @for (currentSkill of skillList; track currentSkill.id) {
             <div class="skills-icon">
               <img [src]="currentSkill.icon" [alt]="currentSkill.name" />
               <p>{{ currentSkill.name }}</p>
             </div>
           }
+
+          
         </div>
         <div class="skills-contact">
           <img src="assets/icons/skills.svg" alt="/" />
