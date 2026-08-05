@@ -2,14 +2,39 @@
 
 .privacy-policy {
   padding: 0 140px 80px 140px;
+
+  @include respond-max(sm) {
+    padding: 0 0 40px 0;
+  }
+
+  @include respond(sm, l) {
+    padding: 0 40px 40px 40px;
+  }
 }
 
 .privacy-wrapper {
   @include d-flex(column, flex-start, center, 60px);
+
+  @include respond(zero, sm) {
+    @include d-flex(column, flex-start, center, 40px);
+  }
+
   h1 {
     font-family: $font-headline;
     font-weight: 800;
     font-size: 78px;
+
+    @include respond(zero, sm) {
+      font-size: 32px;
+    }
+
+    @include respond(sm, m) {
+      font-size: 56px;
+    }
+
+    @include respond(m, l) {
+      font-size: 72px;
+    }
   }
 }
 
@@ -22,7 +47,14 @@
       color: $blue;
       font-weight: 700;
       font-size: 34px;
-    }
 
+      @include respond(zero, sm) {
+        font-size: 30px;
+      }
+
+      @include respond(sm, l) {
+        font-size: 28px;
+      }
+    }
   }
 }

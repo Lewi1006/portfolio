@@ -7,7 +7,7 @@
     padding: 0 0 40px 0;
   }
 
-   @include respond(sm,l) {
+  @include respond(sm, l) {
     padding: 0 40px 40px 40px;
   }
 }
