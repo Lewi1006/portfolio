@@ -15,19 +15,23 @@
   height: $header-height;
   @include d-flex(row, center, space-between);
 
-  @include respond(zero, sm) {
-        max-width: 320px;
-      }
-
   .header-logo {
     font-family: $font-headline;
     font-weight: 800;
     font-size: 36px;
     letter-spacing: -4px;
+
+    @include respond(zero, sm) {
+      font-size: 28px;
+    }
   }
 
   .navigation {
     @include d-flex(row, center, center, 60px);
+
+    @include respond(zero, sm) {
+      @include d-flex(row, center, center, 20px);
+    }
 
     .lang {
       @include d-flex(row, center, center, 16px);
@@ -42,6 +46,10 @@
 
           .lang-btn {
             font-size: 24px;
+
+            @include respond(zero, sm) {
+              font-size: 16px;
+            }
           }
         }
       }
@@ -63,9 +71,15 @@
       width: 40px;
       height: 40px;
       cursor: pointer;
+
       img {
         height: 32px;
         width: auto;
+
+        @include respond(zero, sm) {
+          height: 28px;
+          width: auto;
+        }
       }
     }
   }
@@ -92,15 +106,43 @@
     ul {
       @include d-flex(column, center, center, 50px);
 
+      @include respond(m, desktop) {
+        @include d-flex(column, center, center, 30px);
+      }
+
       li {
         width: 580px;
         padding: 10px 20px;
         text-align: center;
 
+        @include respond(zero, sm) {
+          width: 215px;
+        }
+
+        @include respond(sm, m) {
+          width: 350px;
+        }
+
+        @include respond(m, l) {
+          width: 500px;
+        }
+
         .nav-link {
           font-family: $font-headline;
           font-weight: 700;
           font-size: 96px;
+
+          @include respond(zero, sm) {
+            font-size: 32px;
+          }
+
+          @include respond(sm, m) {
+            font-size: 42px;
+          }
+
+          @include respond(m, l) {
+            font-size: 56px;
+          }
         }
 
         .menu-corner {
@@ -113,6 +155,11 @@
 
           border-left: 3px solid $black;
           border-bottom: 3px solid $black;
+
+          @include respond(zero, sm) {
+            width: 15px;
+            height: 20px;
+          }
         }
       }
     }
@@ -125,16 +172,43 @@
     background-repeat: no-repeat;
     background-position: center-bottom;
     background-size: cover;
-    padding: 0 50px 50px 50px;
+    padding: 0 20px 20px 20px;
 
     @include d-flex(row, flex-end, space-between);
 
+    @include respond(zero, sm) {
+      height: 250px;
+      width: 100%;
+      @include d-flex(column, center, center, 20px);
+    }
+
+    @include respond(sm, m) {
+      height: 250px;
+    }
+
     .overlay-left {
+      @include respond(zero, m) {
+        width: 100%;
+        @include d-flex(column, flex-start, center, 20px);
+      }
+
       color: white;
       h2 {
         font-family: $font-headline;
         font-size: 78px;
         font-weight: 800;
+
+        @include respond(zero, sm) {
+          font-size: 32px;
+        }
+
+        @include respond(sm, m) {
+          font-size: 42px;
+        }
+
+        @include respond(m, l) {
+          font-size: 56px;
+        }
       }
 
       p {
@@ -143,6 +217,10 @@
     }
 
     .overlay-right {
+      @include respond(zero, sm) {
+        width: 100%;
+        @include d-flex(row, center, flex-end, 20px);
+      }
       ul {
         @include d-flex(row, center, center, 20px);
         li {
