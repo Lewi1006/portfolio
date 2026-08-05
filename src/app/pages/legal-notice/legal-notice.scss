@@ -2,6 +2,14 @@
 
 .legal-notice {
   padding: 0 140px 80px 140px;
+
+  @include respond-max(sm) {
+    padding: 0 0 40px 0;
+  }
+
+   @include respond(sm,l) {
+    padding: 0 40px 40px 40px;
+  }
 }
 
 .legal-notice-wrapper {
@@ -10,6 +18,18 @@
     font-family: $font-headline;
     font-weight: 800;
     font-size: 78px;
+
+    @include respond(zero, sm) {
+      font-size: 32px;
+    }
+
+    @include respond(sm, m) {
+      font-size: 56px;
+    }
+
+    @include respond(m, l) {
+      font-size: 72px;
+    }
   }
 
   .legal-content {
@@ -20,6 +40,14 @@
         color: $blue;
         font-weight: 800;
         font-size: 24px;
+
+        @include respond(zero, sm) {
+          font-size: 20px;
+        }
+
+        @include respond(sm, l) {
+          font-size: 22px;
+        }
       }
 
       ul {
@@ -35,6 +63,10 @@
         color: $blue;
         font-weight: 700;
         font-size: 20px;
+
+        @include respond(zero, m) {
+          font-size: 18px;
+        }
       }
     }
   }
@@ -43,4 +75,3 @@
 .highlight {
   color: $blue;
 }
-

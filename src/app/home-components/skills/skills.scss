@@ -2,18 +2,23 @@
 
 .skills-wrapper {
   width: 100%;
+  padding-top: 90px;
   padding-bottom: 100px;
   @include d-flex(column, center, center, 60px);
 
   .skills-frame {
     position: absolute;
-    top: 40px;
+    top: 130px;
     left: 0;
     right: 0;
     bottom: 40px;
 
     border: 4px solid $black;
     z-index: -1;
+
+     @include respond(zero, sm) {
+      top: 105px;
+    }
   }
 
   h2 {
