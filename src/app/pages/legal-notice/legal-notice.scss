@@ -3,8 +3,12 @@
 .legal-notice {
   padding: 0 140px 80px 140px;
 
-  @include respond-max(m) {
-    padding: 0px;
+  @include respond-max(sm) {
+    padding: 0 0 40px 0;
+  }
+
+   @include respond(sm,l) {
+    padding: 0 40px 40px 40px;
   }
 }
 
