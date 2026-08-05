@@ -5,8 +5,20 @@
 
       <div class="navigation">
         <div class="lang" [class.lang-mobile]="menuOpen">
-          <button class="lang-btn lang-btn--active" type="button">EN</button>
-          <button class="lang-btn" type="button">DE</button>
+          <button
+            class="lang-btn lang-btn--active"
+            type="button"
+            (click)="translateService.currentLanguage.set('en')"
+          >
+            EN
+          </button>
+          <button
+            class="lang-btn"
+            type="button"
+            (click)="translateService.currentLanguage.set('de')"
+          >
+            DE
+          </button>
         </div>
 
         @if (menuOpen) {
