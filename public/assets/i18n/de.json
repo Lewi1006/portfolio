@@ -12,6 +12,12 @@
     "title": "Über mich",
     "description": "Schreiben Sie etwas über sich selbst, das mit IT zu tun hat. Warum begeistert Sie das Programmieren? Zeigen Sie Ihre Bereitschaft, neue Technologien zu erlernen.",
     "location": "Berlin",
-    "remote": "Offen für Remote-Arbeit"
+    "remote": "Offen für Remote-Arbeit",
+    "button": "Kontaktiere mich"
+  },
+
+  "skills": {
+    "title": "Meine Skills",
+    "contact": "Ist die von dir gesuchte Kompetenz nicht dabei? <span class=\"highlight\">Melde dich bei mir!</span> Ich bin immer bereit, Neues zu lernen!"
   }
 }

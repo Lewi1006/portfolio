@@ -2,22 +2,19 @@
   <div class="content">
     <div class="skills-wrapper">
       <div class="skills-frame"></div>
-      <h2>My skills</h2>
+      <h2>{{ 'skills.title' | translate }}</h2>
       <div class="skills-content">
         <div class="skills-icons">
-
           @for (currentSkill of skillList; track currentSkill.id) {
             <div class="skills-icon">
               <img [src]="currentSkill.icon" [alt]="currentSkill.name" />
               <p>{{ currentSkill.name }}</p>
             </div>
           }
-
-          
         </div>
         <div class="skills-contact">
           <img src="assets/icons/skills.svg" alt="/" />
-          <p>Don’t see the skill you need? <span>Contact me!</span> I’m always ready to learn!</p>
+          <p [innerHTML]="'skills.contact' | translate"></p>
         </div>
       </div>
     </div>
