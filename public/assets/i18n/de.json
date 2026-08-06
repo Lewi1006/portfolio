@@ -6,5 +6,12 @@
       "portfolio": "Portfolio"
     },
     "contact": "Sag Hallo"
+  },
+
+  "about": {
+    "title": "Über mich",
+    "description": "Schreiben Sie etwas über sich selbst, das mit IT zu tun hat. Warum begeistert Sie das Programmieren? Zeigen Sie Ihre Bereitschaft, neue Technologien zu erlernen.",
+    "location": "Berlin",
+    "remote": "Offen für Remote-Arbeit"
   }
 }

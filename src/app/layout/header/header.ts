@@ -11,13 +11,15 @@ import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 })
 export class Header {
   private translate = inject(TranslateService);
+
   menuOpen = false;
 
+  // for blue border
   get currentLanguage(): string | null {
     return this.translate.currentLang();
   }
 
-  changeLanguage(language: string): void {
+  changeLanguage(language: 'en' | 'de'): void {
     this.translate.use(language);
   }
 

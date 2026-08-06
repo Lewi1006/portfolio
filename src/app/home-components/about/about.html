@@ -1,24 +1,21 @@
 <section class="about">
   <div class="content">
     <div class="about-wrapper">
-      <h2>About me</h2>
+      <h2>{{ 'about.title' | translate }}</h2>
       <div class="about-content">
         <div class="about-text">
           <p>
-            Write some information about yourself that is IT related. Why are you passionate about
-            coding?Show a desire to learn new technologies. Add a brief description of your
-            problem-solving approach.You can include some key traits like: analytical thinking,
-            creativity, persistence and collaboration.
+            {{ 'about.description' | translate }}
           </p>
 
           <div class="about-details">
             <div class="about-detail">
               <img src="assets/icons/house.svg" alt="" />
-              <p>Based in Berlin</p>
+              <p>{{ 'about.location' | translate }}</p>
             </div>
             <div class="about-detail">
               <img src="assets/icons/laptop.svg" alt="" />
-              <p>Open to remote work</p>
+              <p>{{ 'about.remote' | translate }}</p>
             </div>
           </div>
 
