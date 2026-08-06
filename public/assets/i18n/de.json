@@ -19,5 +19,10 @@
   "skills": {
     "title": "Meine Skills",
     "contact": "Ist die von dir gesuchte Kompetenz nicht dabei? <span class=\"highlight\">Melde dich bei mir!</span> Ich bin immer bereit, Neues zu lernen!"
+  },
+
+  "portfolio":{
+    "title": "Portfolio",
+    "description": "Entdecken Sie hier eine Auswahl meiner Arbeiten – probieren Sie die Projekte aus, um meine Fähigkeiten in der Praxis zu erleben."
   }
 }
