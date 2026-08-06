@@ -21,8 +21,20 @@
     "contact": "Ist die von dir gesuchte Kompetenz nicht dabei? <span class=\"highlight\">Melde dich bei mir!</span> Ich bin immer bereit, Neues zu lernen!"
   },
 
-  "portfolio":{
+  "portfolio": {
     "title": "Portfolio",
-    "description": "Entdecken Sie hier eine Auswahl meiner Arbeiten – probieren Sie die Projekte aus, um meine Fähigkeiten in der Praxis zu erleben."
+    "description": "Entdecken Sie hier eine Auswahl meiner Arbeiten – probieren Sie die Projekte aus, um meine Fähigkeiten in der Praxis zu erleben.",
+    "projects": {
+      "project1": {
+        "title": "Join",
+        "skills": "Angular | TypeScript | HTML | CSS | Firebase",
+        "description": "Ein vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben per Drag & Drop und weisen Sie ihnen Benutzer und Kategorien zu."
+      },
+      "project2": {
+        "title": "El Pollo Loco",
+        "skills": "JavaScript | HTML | CSS",
+        "description": "Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe dabei, Münzen und Salsa-Flaschen zu finden, um gegen das böse Huhn zu kämpfen."
+      }
+    }
   }
 }

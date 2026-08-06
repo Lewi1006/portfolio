@@ -1,8 +1,8 @@
 export interface Project{
     id: number;
-    title: string;
+    titleKey: string;
     img: string;
-    skills: string;
-    description: string;
+    skillsKey: string;
+    descriptionKey: string;
     gitHub: string;
 }

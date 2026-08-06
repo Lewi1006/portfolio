@@ -16,13 +16,25 @@
     "button": "Let's talk"
   },
 
-  "skills":{
+  "skills": {
     "title": "My skills",
     "contact": "Don’t see the skill you need? <span class=\"highlight\">Contact me!</span> I’m always ready to learn!"
   },
 
-  "portfolio":{
+  "portfolio": {
     "title": "Portfolio",
-    "description": "Explore a selection of my work here - Interact with projects to see my skills in action."
+    "description": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "projects": {
+      "project1": {
+        "title": "Join",
+        "skills": "Angular | TypeScript | HTML | CSS | Firebase",
+        "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      },
+      "project2": {
+        "title": "El Pollo Loco",
+        "skills": "JavaScript | HTML | CSS",
+        "description": "A simple Jump-and-Run game based on an object oriented approach. Help Pepe find coins and salsa bottles to fight against the evil chicken."
+      }
+    }
   }
 }

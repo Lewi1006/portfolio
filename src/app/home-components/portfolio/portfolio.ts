@@ -12,20 +12,20 @@ export class Portfolio {
   projectList: Project[] = [
     {
       id: 1,
-      title: 'Join',
+      titleKey: 'portfolio.projects.project1.title',
       img: 'assets/img/placeholder.jpg',
-      skills: 'Angular | TypeScript | HTML | CSS | Firebase',
-      description:
-        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      skillsKey: 'portfolio.projects.project1.skills',
+      descriptionKey:
+        'portfolio.projects.project1.description',
       gitHub: 'https://github.com/Lewi1006',
     },
     {
       id: 2,
-      title: 'El Pollo Loco',
+      titleKey: 'portfolio.projects.project2.title',
       img: 'assets/img/placeholder.jpg',
-      skills: 'JavaScript | HTML | CSS',
-      description:
-        'A simple Jump-and-Run game based on an object oriented approach. Help Pepe find coins and salsa bottles to fight against the evil chicken.',
+      skillsKey: 'portfolio.projects.project2.skills',
+      descriptionKey:
+        'portfolio.projects.project2.description',
       gitHub: 'https://github.com/Lewi1006',
     },
   ];

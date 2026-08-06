@@ -2,9 +2,9 @@
   <div class="content">
     <div class="portfolio-wrapper">
       <div class="portfolio-headline">
-        <h2>{{'portfolio.title' | translate}}</h2>
+        <h2>{{ 'portfolio.title' | translate }}</h2>
         <p class="portfolio-intro">
-          {{'portfolio.description' | translate}}
+          {{ 'portfolio.description' | translate }}
         </p>
       </div>
 
@@ -16,17 +16,19 @@
 
           <div class="project-img">
             <div class="img-wrapper">
-              <a href=""><img [src]="currentProject.img" [alt]="currentProject.title" /></a>
+              <a href=""
+                ><img [src]="currentProject.img" [alt]="currentProject.titleKey | translate"
+              /></a>
               <div class="arrow-animation"><img src="assets/icons/arrow_white_small.svg" /></div>
             </div>
           </div>
 
           <div class="project-content">
             <div class="project-details">
-              <h3>{{ currentProject.title }}</h3>
-              <p class="project-skills">{{ currentProject.skills }}</p>
+              <h3>{{ currentProject.titleKey | translate }}</h3>
+              <p class="project-skills">{{ currentProject.skillsKey | translate }}</p>
               <p class="project-description">
-                {{ currentProject.description }}
+                {{ currentProject.descriptionKey | translate }}
               </p>
               <button class="project-btn">Github</button>
             </div>
