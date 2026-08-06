@@ -1,8 +1,10 @@
 {
   "header": {
-    "about": "Über mich",
-    "skills": "Meine Skills",
-    "portfolio": "Portfolio",
-    "hi": "Sag Hallo"
+    "nav": {
+      "about": "Über mich",
+      "skills": "Meine Skills",
+      "portfolio": "Portfolio"
+    },
+    "contact": "Sag Hallo"
   }
 }

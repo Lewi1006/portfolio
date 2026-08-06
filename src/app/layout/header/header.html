@@ -2,7 +2,7 @@
   <div class="content">
     <div class="header-wrapper">
       <a class="header-logo" href="/"> [LW] </a>
-
+    
       <div class="navigation">
         <div class="lang" [class.lang-mobile]="menuOpen">
           <button class="lang-btn lang-btn--active" type="button">EN</button>
@@ -26,15 +26,21 @@
         <nav class="overlay-navigation">
           <ul>
             <li>
-              <a href="#about" class="nav-link" (click)="closeMenu()">About me</a>
+              <a href="#about" class="nav-link" (click)="closeMenu()">
+                {{ 'header.nav.about' | translate }}</a
+              >
               <div class="menu-corner"></div>
             </li>
             <li>
-              <a href="#skills" class="nav-link" (click)="closeMenu()">My skills</a>
+              <a href="#skills" class="nav-link" (click)="closeMenu()">{{
+                'header.nav.skills' | translate
+              }}</a>
               <div class="menu-corner"></div>
             </li>
             <li>
-              <a href="#portfolio" class="nav-link" (click)="closeMenu()">Portfolio</a>
+              <a href="#portfolio" class="nav-link" (click)="closeMenu()">{{
+                'header.nav.portfolio' | translate
+              }}</a>
               <div class="menu-corner"></div>
             </li>
           </ul>
