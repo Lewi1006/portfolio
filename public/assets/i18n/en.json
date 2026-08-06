@@ -36,5 +36,27 @@
         "description": "A simple Jump-and-Run game based on an object oriented approach. Help Pepe find coins and salsa bottles to fight against the evil chicken."
       }
     }
+  },
+
+  "references": {
+    "title": "References",
+    "description": "I thrive both independently and as part of a team. Here’s what my colleagues have to say about working with me.",
+    "references": {
+      "reference1": {
+        "name": "V. Schuster",
+        "role": "Team Partner",
+        "text": "Leo really kept the team together with her great organization and clear communication. We wouldn't have got this far without her commitment."
+      },
+      "reference2": {
+        "name": "E.Eichinger",
+        "role": "Team Partner",
+        "text": "Leo was a top team colleague at DA. Her positive commitment and willingness to take on responsibility made a significant contribution to us achieving our goals."
+      },
+      "reference3": {
+        "name": "I. Nuber",
+        "role": "Frontend Engineer",
+        "text": "It was a great pleasure to work with Leo. She knows how to encourage team members to present the best work possible, always adding something to brainstorm."
+      }
+    }
   }
 }

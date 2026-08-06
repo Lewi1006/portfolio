@@ -2,10 +2,9 @@
   <div class="content">
     <div class="ref-wrapper">
       <div class="ref-headline">
-        <h2>References</h2>
+        <h2>{{'references.title' | translate}}</h2>
         <p class="ref-intro">
-          I thriveI thrive both independently and as part of a team. Here’s what my colleagues have
-          to say about working with me.
+          {{'references.description' | translate}}
         </p>
       </div>
 
@@ -14,10 +13,10 @@
           <div class="ref-card">
             <img [src]= "currentRef.img" [alt]="'quotation marks'" />
             <div class="ref-card-title">
-              <h3>{{currentRef.name}}</h3>
-              <p>{{currentRef.role}}</p>
+              <h3>{{currentRef.nameKey | translate}}</h3>
+              <p>{{currentRef.roleKey | translate}}</p>
             </div>
-            <p class="ref-card-text">{{currentRef.text}}</p>
+            <p class="ref-card-text">{{currentRef.textKey | translate}}</p>
           </div>
         }
       </div>

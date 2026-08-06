@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Reference } from './references.interface';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-references',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './references.html',
   styleUrl: './references.scss',
 })
@@ -12,23 +13,23 @@ export class References {
     {
       id: 1,
       img: 'assets/icons/quotation.svg',
-      name: 'V. Schuster',
-      role: 'Team Partner',
-      text: `Leo really kept the team together with her great organization and clear communication. We wouldn't have got this far without her commitment.`,
+      nameKey: 'references.references.reference1.name',
+      roleKey: 'references.references.reference1.role',
+      textKey: 'references.references.reference1.text',
     },
     {
       id: 2,
       img: 'assets/icons/quotation.svg',
-      name: 'E.Eichinger',
-      role: 'Team Partner',
-      text: `Leo was a top team colleague at DA. Her positive commitment and willingness to take on responsibility made a significant contribution to us achieving our goals.`,
+      nameKey: 'references.references.reference2.name',
+      roleKey: 'references.references.reference2.role',
+      textKey: 'references.references.reference2.text',
     },
     {
       id: 3,
       img: 'assets/icons/quotation.svg',
-      name: 'I. Nuber',
-      role: 'Frontend Engineer',
-      text: `It was a great pleasure to work with Leo. She knows how to encourage team members to present the best work possible, always adding something to brainstorm.`,
+      nameKey: 'references.references.reference3.name',
+      roleKey: 'references.references.reference3.role',
+      textKey: 'references.references.reference3.text',
     },
   ];
 }
