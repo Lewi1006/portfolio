@@ -13,6 +13,10 @@ export class Header {
   private translate = inject(TranslateService);
   menuOpen = false;
 
+  get currentLanguage(): string | null {
+    return this.translate.currentLang();
+  }
+
   changeLanguage(language: string): void {
     this.translate.use(language);
   }
