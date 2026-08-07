@@ -1,0 +1,100 @@
+{
+  "header": {
+    "nav": {
+      "about": "Über mich",
+      "skills": "Meine Skills",
+      "portfolio": "Portfolio"
+    },
+    "contact": "Sag Hallo"
+  },
+
+  "about": {
+    "title": "Über mich",
+    "description": "Schreiben Sie etwas über sich selbst, das mit IT zu tun hat. Warum begeistert Sie das Programmieren? Zeigen Sie Ihre Bereitschaft, neue Technologien zu erlernen.",
+    "location": "Berlin",
+    "remote": "Offen für Remote-Arbeit",
+    "button": "Kontaktiere mich"
+  },
+
+  "skills": {
+    "title": "Meine Skills",
+    "contact": "Ist die von dir gesuchte Kompetenz nicht dabei? <span class=\"highlight\">Melde dich bei mir!</span> Ich bin immer bereit, Neues zu lernen!"
+  },
+
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Entdecken Sie hier eine Auswahl meiner Arbeiten – probieren Sie die Projekte aus, um meine Fähigkeiten in der Praxis zu erleben.",
+    "projects": {
+      "project1": {
+        "title": "Join",
+        "skills": "Angular | TypeScript | HTML | CSS | Firebase",
+        "description": "Ein vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben per Drag & Drop und weisen Sie ihnen Benutzer und Kategorien zu."
+      },
+      "project2": {
+        "title": "El Pollo Loco",
+        "skills": "JavaScript | HTML | CSS",
+        "description": "Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe dabei, Münzen und Salsa-Flaschen zu finden, um gegen das böse Huhn zu kämpfen."
+      }
+    }
+  },
+
+  "references": {
+    "title": "Referenzen",
+    "description": "Ich arbeite sowohl eigenständig als auch im Team sehr gerne. Hier sind einige Kommentare meiner Kollegen zur Zusammenarbeit mit mir.",
+    "references": {
+      "reference1": {
+        "name": "V. Schuster",
+        "role": "Team Partner",
+        "text": "Leo hat das Team mit ihrer hervorragenden Organisation und ihrer klaren Kommunikation wirklich zusammengehalten. Ohne ihr Engagement wären wir nicht so weit gekommen."
+      },
+      "reference2": {
+        "name": "E.Eichinger",
+        "role": "Team Partner",
+        "text": "Leo war eine hervorragende Teamkollegin bei DA. Ihr positives Engagement und ihre Bereitschaft, Verantwortung zu übernehmen, haben wesentlich dazu beigetragen, dass wir unsere Ziele erreichen konnten."
+      },
+      "reference3": {
+        "name": "I. Nuber",
+        "role": "Frontend Engineer",
+        "text": "Es war mir eine große Freude, mit Leo zusammenzuarbeiten. Sie versteht es, die Teammitglieder dazu zu motivieren, ihr Bestes zu geben, und bringt immer neue Ideen in die Brainstorming-Runden ein."
+      }
+    }
+  },
+
+  "contact": {
+    "title": "Sag Hallo!",
+    "subtitle": "Möchtest du ein neues Projekt besprechen?",
+    "description": "Sag Hallo! Lass uns deine Ideen besprechen und sie in die Tat umsetzen.",
+    "form": {
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Dein name",
+          "error": "Bitte gib deinen Namen ein!"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Deine Email",
+          "error": "Bitte gib eine gültige E-Mail-Adresse ein!"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Deine Nachricht",
+          "error": "Bitte gib eine Nachricht ein!"
+        }
+      },
+
+      "privacy": {
+        "before": "Ich habe die",
+        "link": "Datenschutzerklärung",
+        "after": "gelesen und stimme der Verarbeitung meiner Daten gemäß den dort beschriebenen Bestimmungen zu.",
+        "error": "Bitte stimme der Datenschutzerklärung zu!"
+      },
+
+      "submit": "Sende eine Nachricht"
+    }
+  },
+
+  "footer": {
+    "legal": "Rechtshinweis"
+  }
+}

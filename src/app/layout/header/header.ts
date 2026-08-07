@@ -1,14 +1,27 @@
-import { Component } from '@angular/core';
-import { RouterLink } from "@angular/router";
+import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink],
+  standalone: true,
+  imports: [RouterLink, TranslatePipe],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
 export class Header {
+  private translate = inject(TranslateService);
+
   menuOpen = false;
+
+  // for blue border
+  get currentLanguage(): string | null {
+    return this.translate.currentLang();
+  }
+
+  changeLanguage(language: 'en' | 'de'): void {
+    this.translate.use(language);
+  }
 
   openMenu() {
     this.menuOpen = true;

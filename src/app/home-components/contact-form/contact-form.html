@@ -1,40 +1,54 @@
 <section class="contact">
   <div class="content">
     <div class="contact-wrapper">
-      <h2>Say Hi!</h2>
+      <h2>{{ 'contact.title' | translate }}</h2>
 
       <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="formSubmit()">
         <div class="contact-form-headline">
-          <h3>Want to discuss a new project?</h3>
-          <p>Say hello! let's discuss your ideas and make it happen</p>
+          <h3>{{ 'contact.subtitle' | translate }}</h3>
+          <p>{{ 'contact.description' | translate }}</p>
         </div>
 
         <div class="contact-field">
-          <label for="name">Name</label>
-          <input id="name" type="text" formControlName="name" placeholder="Your name" />
+          <label for="name">{{ 'contact.form.fields.name.label' | translate }}</label>
+          <input
+            id="name"
+            type="text"
+            formControlName="name"
+            [placeholder]="'contact.form.fields.name.placeholder' | translate"
+          />
           <div class="form-error-wrapper">
             @if (name?.touched && name?.invalid) {
-              <p class="form-error">Please enter your name!</p>
+              <p class="form-error">{{ 'contact.form.fields.name.error' | translate }}</p>
             }
           </div>
         </div>
 
         <div class="contact-field">
-          <label for="email">Email</label>
-          <input id="email" type="email" formControlName="email" placeholder="Your email" />
+          <label for="email">{{ 'contact.form.fields.email.label' | translate }}</label>
+          <input
+            id="email"
+            type="email"
+            formControlName="email"
+            [placeholder]="'contact.form.fields.email.placeholder' | translate"
+          />
           <div class="form-error-wrapper">
             @if (email?.touched && email?.invalid) {
-              <p class="form-error">Please enter a valid email!</p>
+              <p class="form-error">{{ 'contact.form.fields.email.error' | translate }}</p>
             }
           </div>
         </div>
 
         <div class="contact-field contact-field-message">
-          <label for="message">Message</label>
-          <textarea id="message" formControlName="message" placeholder="Your message"></textarea>
+          <label for="message">{{ 'contact.form.fields.message.label' | translate }}</label>
+          <textarea
+            id="message"
+            formControlName="message"
+            [placeholder]="'contact.form.fields.message.placeholder' | translate"
+          ></textarea>
           <div class="form-error-wrapper">
             @if (message?.touched && message?.invalid) {
-              <p class="form-error">Please enter a message!</p>
+              <p class="form-error">{{ 'contact.form.fields.message.error' | translate }}</p>
             }
           </div>
         </div>
@@ -43,21 +57,24 @@
           <div class="privacy-wrapper">
             <input id="privacy" type="checkbox" formControlName="privacy" />
             <label for="privacy">
-              I've read the <span [routerLink]="['/privacy-policy']">privacy policy</span> and agree to the processing of my data as
-              outlined.
+              {{ 'contact.form.privacy.before' | translate }}
+              <span [routerLink]="['/privacy-policy']">{{
+                'contact.form.privacy.link' | translate
+              }}</span>
+              {{ 'contact.form.privacy.after' | translate }}
             </label>
           </div>
           <div>
             <div class="form-error-wrapper">
               @if (privacy?.touched && privacy?.invalid) {
-                <p class="form-error">Please agree to the privacy policy!</p>
+                <p class="form-error">{{ 'contact.form.privacy.error' | translate }}</p>
               }
             </div>
           </div>
         </div>
 
         <button class="contact-btn" type="submit" [disabled]="contactForm.invalid">
-          Send message
+          {{ 'contact.form.submit' | translate }}
         </button>
       </form>
     </div>

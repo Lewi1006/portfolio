@@ -1,0 +1,100 @@
+{
+  "header": {
+    "nav": {
+      "about": "About me",
+      "skills": "My skills",
+      "portfolio": "Portfolio"
+    },
+    "contact": "Say Hi"
+  },
+
+  "about": {
+    "title": "About me",
+    "description": "Write some information about yourself that is IT related. Why are you passionate about coding? Show a desire to learn new technologies. Add a brief description of your problem-solving approach.You can include some key traits like: analytical thinking, creativity, persistence and collaboration.",
+    "location": "Based in Berlin",
+    "remote": "Open to remote work",
+    "button": "Let's talk"
+  },
+
+  "skills": {
+    "title": "My skills",
+    "contact": "Don’t see the skill you need? <span class=\"highlight\">Contact me!</span> I’m always ready to learn!"
+  },
+
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "projects": {
+      "project1": {
+        "title": "Join",
+        "skills": "Angular | TypeScript | HTML | CSS | Firebase",
+        "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      },
+      "project2": {
+        "title": "El Pollo Loco",
+        "skills": "JavaScript | HTML | CSS",
+        "description": "A simple Jump-and-Run game based on an object oriented approach. Help Pepe find coins and salsa bottles to fight against the evil chicken."
+      }
+    }
+  },
+
+  "references": {
+    "title": "References",
+    "description": "I thrive both independently and as part of a team. Here’s what my colleagues have to say about working with me.",
+    "references": {
+      "reference1": {
+        "name": "V. Schuster",
+        "role": "Team Partner",
+        "text": "Leo really kept the team together with her great organization and clear communication. We wouldn't have got this far without her commitment."
+      },
+      "reference2": {
+        "name": "E.Eichinger",
+        "role": "Team Partner",
+        "text": "Leo was a top team colleague at DA. Her positive commitment and willingness to take on responsibility made a significant contribution to us achieving our goals."
+      },
+      "reference3": {
+        "name": "I. Nuber",
+        "role": "Frontend Engineer",
+        "text": "It was a great pleasure to work with Leo. She knows how to encourage team members to present the best work possible, always adding something to brainstorm."
+      }
+    }
+  },
+
+  "contact": {
+    "title": "Say Hi!",
+    "subtitle": "Want to discuss a new project?",
+    "description": "Say hello! let's discuss your ideas and make it happen",
+    "form": {
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Your name",
+          "error": "Please enter your name!"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Your email",
+          "error": "Please enter a valid email!"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Your message",
+          "error": "Please enter a message!"
+        }
+      },
+
+      "privacy": {
+        "before": "I've read the",
+        "link": "privacy policy",
+        "after": "and agree to the processing of my data as outlined.",
+        "error": "Please agree to the privacy policy!"
+      },
+
+      "submit": "Send message"
+    }
+  },
+  
+  "footer": {
+    "legal": "Legal notice"
+  }
+}
