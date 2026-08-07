@@ -92,5 +92,9 @@
 
       "submit": "Send message"
     }
+  },
+  
+  "footer": {
+    "legal": "Legal notice"
   }
 }

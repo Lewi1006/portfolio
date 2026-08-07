@@ -92,5 +92,9 @@
 
       "submit": "Sende eine Nachricht"
     }
+  },
+
+  "footer": {
+    "legal": "Rechtshinweis"
   }
 }
