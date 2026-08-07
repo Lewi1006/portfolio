@@ -6,7 +6,6 @@ import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { routes } from './app.routes';
 
-
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
@@ -20,7 +19,7 @@ export const appConfig: ApplicationConfig = {
     ),
 
     provideHttpClient(),
-    
+
     provideTranslateService({
       loader: provideTranslateHttpLoader({
         prefix: './assets/i18n/',

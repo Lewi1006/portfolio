@@ -58,5 +58,39 @@
         "text": "It was a great pleasure to work with Leo. She knows how to encourage team members to present the best work possible, always adding something to brainstorm."
       }
     }
+  },
+
+  "contact": {
+    "title": "Say Hi!",
+    "subtitle": "Want to discuss a new project?",
+    "description": "Say hello! let's discuss your ideas and make it happen",
+    "form": {
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Your name",
+          "error": "Please enter your name!"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Your email",
+          "error": "Please enter a valid email!"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Your message",
+          "error": "Please enter a message!"
+        }
+      },
+
+      "privacy": {
+        "before": "I've read the",
+        "link": "privacy policy",
+        "after": "and agree to the processing of my data as outlined.",
+        "error": "Please agree to the privacy policy!"
+      },
+
+      "submit": "Send message"
+    }
   }
 }
