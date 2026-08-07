@@ -1,7 +1,7 @@
 <section class="privacy-policy">
   <div class="content">
     <div class="privacy-wrapper">
-      <h1>{{ 'privacy.title' | translate }}</h1>
+      <h1 [class.headline-german]="currentLanguage === 'de'">{{ 'privacy.title' | translate }}</h1>
 
       <div class="privacy-content">
         <div class="privacy-paragraph">

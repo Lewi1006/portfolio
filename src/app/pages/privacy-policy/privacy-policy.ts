@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { TranslatePipe } from '@ngx-translate/core';
+import { Component, inject } from '@angular/core';
+import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -7,4 +7,10 @@ import { TranslatePipe } from '@ngx-translate/core';
   templateUrl: './privacy-policy.html',
   styleUrl: './privacy-policy.scss',
 })
-export class PrivacyPolicy {}
+export class PrivacyPolicy {
+  private translate = inject(TranslateService);
+
+  get currentLanguage(): string | null {
+    return this.translate.currentLang();
+  }
+}
