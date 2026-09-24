@@ -18,7 +18,9 @@
 
   "skills": {
     "title": "Meine Skills",
-    "contact": "Ist die von dir gesuchte Kompetenz nicht dabei? <span class=\"highlight\">Melde dich bei mir!</span> Ich bin immer bereit, Neues zu lernen!"
+    "contactStart": "Ist die von dir gesuchte Kompetenz nicht dabei?",
+    "contactLink": "Melde dich bei mir!",
+    "contactEnd": "Ich bin immer bereit, Neues zu lernen!"
   },
 
   "portfolio": {
@@ -151,7 +153,7 @@
     "date": "Datum: 01. August 2026"
   },
 
-    "privacy": {
+  "privacy": {
     "title": "Datenschutzerklärung",
     "sections": {
       "section1": {

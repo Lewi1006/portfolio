@@ -18,7 +18,14 @@
           <div class="icon-wrapper">
             <img src="assets/icons/skills.svg" alt="/" />
           </div>
-          <p [innerHTML]="'skills.contact' | translate"></p>
+
+          <p>
+            {{ 'skills.contactStart' | translate }}
+            <span class="highlight">
+              {{ 'skills.contactLink' | translate }}
+            </span>
+            {{ 'skills.contactEnd' | translate }}
+          </p>
         </div>
       </div>
     </div>
