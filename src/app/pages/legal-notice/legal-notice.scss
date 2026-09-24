@@ -41,6 +41,11 @@
         font-weight: 800;
         font-size: 24px;
 
+        
+        &:hover{
+            color: $blue;
+          }
+
         @include respond(zero, sm) {
           font-size: 20px;
         }

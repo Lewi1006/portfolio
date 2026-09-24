@@ -47,10 +47,15 @@
 
   .privacy-paragraph {
     @include d-flex(column, flex-start, center, 20px);
+
     h2 {
       color: $blue;
       font-weight: 700;
       font-size: 34px;
+
+      &:hover {
+        color: $blue;
+      }
 
       @include respond(zero, sm) {
         font-size: 30px;

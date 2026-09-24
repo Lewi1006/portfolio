@@ -16,6 +16,10 @@
       font-size: 78px;
       line-height: 100%;
 
+      &:hover {
+        color: $blue;
+      }
+
       @include respond(zero, sm) {
         font-size: 32px;
       }

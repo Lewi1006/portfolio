@@ -1,6 +1,6 @@
 export interface Reference{
     id: number;
-    img: string;
+    // img: string;
     nameKey: string;
     roleKey: string;
     textKey: string;

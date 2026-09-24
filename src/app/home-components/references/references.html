@@ -11,7 +11,8 @@
       <div class="ref-card-wrapper">
       @for (currentRef of reference; track currentRef.id) {
           <div class="ref-card">
-            <img [src]= "currentRef.img" [alt]="'quotation marks'" />
+            <span class="quotation-mark">❞</span>
+            <!-- <img [src]= "currentRef.img" [alt]="'quotation marks'" /> -->
             <div class="ref-card-title">
               <h3>{{currentRef.nameKey | translate}}</h3>
               <p>{{currentRef.roleKey | translate}}</p>

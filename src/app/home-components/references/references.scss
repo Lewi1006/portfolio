@@ -11,11 +11,16 @@
 
   .ref-headline {
     @include d-flex(column, center, center, 20px);
+
     h2 {
       font-family: $font-headline;
       font-weight: 800;
       font-size: 78px;
       line-height: 100%;
+
+      &:hover {
+        color: $blue;
+      }
 
       @include respond(zero, sm) {
         font-size: 32px;
@@ -57,6 +62,14 @@
       padding: 36px 16px;
       @include d-flex(column, center, flex-start, 20px);
 
+      &:hover {
+        border: solid $blue 4px;
+
+        .quotation-mark {
+          color: $blue;
+        }
+      }
+
       @include respond(zero, sm) {
         width: 300px;
       }
@@ -65,10 +78,16 @@
         min-height: 445px;
       }
 
-      img {
-        width: 40px;
-        height: auto;
+      .quotation-mark {
+        font-size: 48px;
+        line-height: 1;
+        display: block;
+        margin-bottom: -10px;
       }
+      // img {
+      //   width: 40px;
+      //   height: auto;
+      // }
       .ref-card-title {
         @include d-flex(column, center, center);
 
