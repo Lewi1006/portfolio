@@ -171,6 +171,11 @@
       transform: scaleY(1.3);
     }
   }
+
+   @include respond(zero, l) {
+    display: none;
+  }
+
 }
 
 
