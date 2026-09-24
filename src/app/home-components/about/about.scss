@@ -164,12 +164,13 @@
 
   .arrow-img {
     width: 200px;
-    overflow: hidden;
+    // overflow: hidden;
     @include d-flex(row, center, flex-end);
 
     img {
       height: 100%;
       width: fit-content;
+      transition: transform 0.6s ease;
     }
   }
 
@@ -178,6 +179,14 @@
 
     .arrow-img {
       height: 100%;
+    }
+  }
+}
+
+.arrow-left.arrow-scrolled {
+  .arrow-img {
+    img {
+      transform: translate(-100px, 100px);
     }
   }
 }

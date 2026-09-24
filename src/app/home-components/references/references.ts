@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Reference } from './references.interface';
 import { TranslatePipe } from '@ngx-translate/core';
+import { ScrollArrow } from '../../shared/scroll-arrow.directive';
 
 @Component({
   selector: 'app-references',
-  imports: [TranslatePipe],
+  imports: [TranslatePipe, ScrollArrow],
   templateUrl: './references.html',
   styleUrl: './references.scss',
 })

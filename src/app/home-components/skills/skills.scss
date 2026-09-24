@@ -164,7 +164,10 @@
           }
         }
       }
+
       @include respond(zero, sm) {
+        width: fit-content;
+        max-width: 100%;
         font-size: 20px;
       }
     }
@@ -215,12 +218,10 @@
   }
 }
 
-  .arrow-right.arrow-scrolled {
+.arrow-right.arrow-scrolled {
   .arrow-img {
     img {
-    transform: translate(100px, 100px);
-
-
+      transform: translate(100px, 100px);
     }
   }
 }
