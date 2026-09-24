@@ -61,14 +61,56 @@
         width: clamp(70px, 9vw, 120px);
         @include d-flex(column, center, center, 14px);
 
-        img {
+        .icon-wrapper {
           width: 75px;
-          height: auto;
+          height: 75px;
+          overflow: hidden;
 
           @include respond(zero, sm) {
             width: 55px;
+            height: 55px;
+          }
+          img {
+            width: 75px;
+            height: auto;
+            // transition: transform 0.5s ease;
+
+            // &:hover {
+            //   transform: rotateY(360deg);
+            // }
+
+            @include respond(zero, sm) {
+              width: 55px;
+            }
           }
         }
+
+        &:hover {
+          .icon-wrapper img {
+            animation: skillMove 0.8s ease-in-out;
+          }
+          p {
+            color: $blue;
+          }
+        }
+
+        // @keyframes skillMove {
+        //   0% {
+        //     transform: translateX(0);
+        //   }
+
+        //   50% {
+        //     transform: translateX(100%);
+        //   }
+
+        //   50.1% {
+        //     transform: translateX(-100%);
+        //   }
+
+        //   100% {
+        //     transform: translateX(0);
+        //   }
+        // }
 
         p {
           font-weight: 700;
@@ -84,11 +126,29 @@
     width: min(90%, 780px);
     @include d-flex(row, center, center, 24px);
 
-    img {
+    .icon-wrapper {
       width: 75px;
-      height: auto;
+      height: 75px;
+      overflow: hidden;
+
       @include respond(zero, sm) {
         width: 57px;
+        height: 57px;
+      }
+
+      img {
+        width: 75px;
+        height: auto;
+
+        @include respond(zero, sm) {
+          width: 57px;
+        }
+      }
+    }
+
+    &:hover {
+      .icon-wrapper img {
+        animation: skillMove 0.8s ease-in-out;
       }
     }
 
@@ -129,5 +189,23 @@
     .arrow-img {
       height: 100%;
     }
+  }
+}
+
+@keyframes skillMove {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(100%);
+  }
+
+  50.1% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }

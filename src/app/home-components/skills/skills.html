@@ -7,13 +7,17 @@
         <div class="skills-icons">
           @for (currentSkill of skillList; track currentSkill.id) {
             <div class="skills-icon">
-              <img [src]="currentSkill.icon" [alt]="currentSkill.name" />
+              <div class="icon-wrapper">
+                <img [src]="currentSkill.icon" [alt]="currentSkill.name" />
+              </div>
               <p>{{ currentSkill.name }}</p>
             </div>
           }
         </div>
         <div class="skills-contact">
-          <img src="assets/icons/skills.svg" alt="/" />
+          <div class="icon-wrapper">
+            <img src="assets/icons/skills.svg" alt="/" />
+          </div>
           <p [innerHTML]="'skills.contact' | translate"></p>
         </div>
       </div>
