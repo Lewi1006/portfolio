@@ -110,6 +110,12 @@
         line-height: 120%;
         padding: 12px 30px;
         border: solid 4px black;
+        transition: transform 0.2s ease;
+
+        &:hover {
+          transform: scaleX(1.15);
+          font-weight: 700;
+        }
 
         @include respond-max(sm) {
           font-size: 20px;

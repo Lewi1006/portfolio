@@ -218,6 +218,13 @@
           font-size: 28px;
           border: solid black 2px;
           padding: 4px 8px;
+          transition: transform 0.2s ease;
+          transform-origin: left center;
+
+          &:hover {
+            transform: scaleX(1.15);
+            font-weight: 700;
+          }
 
           @include respond(l, desktop) {
             font-size: 24px;
