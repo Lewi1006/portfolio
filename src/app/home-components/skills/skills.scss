@@ -3,7 +3,7 @@
 .skills-wrapper {
   width: 100%;
   padding-top: 90px;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
   @include d-flex(column, center, center, 60px);
 
   .skills-frame {
@@ -195,6 +195,7 @@
 .arrow-right {
   width: 100%;
   height: 300px;
+  overflow: hidden;
 
   @include d-flex(row, flex-start, flex-start);
 
@@ -222,6 +223,10 @@
   .arrow-img {
     img {
       transform: translate(100px, 100px);
+
+       @include respond-max(sm) {
+        transform: translate(60px, 60px);
+      }
     }
   }
 }
