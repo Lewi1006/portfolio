@@ -10,7 +10,7 @@
 
   "about": {
     "title": "About me",
-    "description": "Write some information about yourself that is IT related. Why are you passionate about coding? Show a desire to learn new technologies. Add a brief description of your problem-solving approach.You can include some key traits like: analytical thinking, creativity, persistence and collaboration.",
+    "description": "I come from a communication design background and want to combine my creative skills with technology. I enjoy understanding how things work and building them myself. I’m curious, analytical and enjoy learning independently while also exchanging ideas with others. When I face a problem, I break it down, try different approaches and find a solution.",
     "location": "Based in Berlin",
     "remote": "Open to remote work",
     "button": "Let's talk"
@@ -156,13 +156,33 @@
   "privacy": {
     "title": "Privacy Policy",
     "sections": {
-      "section1": {
-        "title": "Subtitle",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque odio felis, iaculis ut massa eget, ornare lacinia urna. In dignissim justo eu velit sagittis, in scelerisque nulla convallis. Vestibulum eros lorem, sollicitudin eget eros non, varius aliquam mauris. Sed turpis ipsum, condimentum quis nulla at, lobortis facilisis ipsum. Nunc erat justo, hendrerit vel enim vitae, feugiat mattis dui. In auctor dignissim luctus. Mauris ornare ipsum at ultrices eleifend. Praesent tempus congue magna. Quisque libero erat, pharetra a neque et, imperdiet semper justo."
+      "controller": {
+        "title": "Controller",
+        "text": "The person responsible for this website is Leonie Wind. You can contact me using the contact details provided on this website."
       },
-      "section2": {
-        "title": "Subtitle",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque odio felis, iaculis ut massa eget, ornare lacinia urna. In dignissim justo eu velit sagittis, in scelerisque nulla convallis. Vestibulum eros lorem, sollicitudin eget eros non, varius aliquam mauris. Sed turpis ipsum, condimentum quis nulla at, lobortis facilisis ipsum. Nunc erat justo, hendrerit vel enim vitae, feugiat mattis dui. In auctor dignissim luctus. Mauris ornare ipsum at ultrices eleifend. Praesent tempus congue magna. Quisque libero erat, pharetra a neque et, imperdiet semper justo."
+      "website": {
+        "title": "Visiting this website",
+        "text": "When you visit this website, technical information such as your IP address, browser type and the time of your visit may be processed by the hosting provider. This information is used to deliver and secure the website."
+      },
+      "contact": {
+        "title": "Contact",
+        "text": "If you contact me by email, the information you provide will only be used to respond to your request. Your data will not be passed on to third parties unless this is required by law."
+      },
+      "server": {
+        "title": "Hosting",
+        "text": "This website is hosted by a third-party hosting provider. The hosting provider may process technical access data in order to operate and secure the website."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "text": "This website does not use cookies for advertising or user tracking. Technically necessary storage may be used where required for the website to function."
+      },
+      "rights": {
+        "title": "Your rights",
+        "text": "You have the right to request information about your personal data, as well as correction, deletion or restriction of processing where applicable. You also have the right to lodge a complaint with a data protection supervisory authority."
+      },
+      "changes": {
+        "title": "Changes to this privacy policy",
+        "text": "This privacy policy may be updated if the website or the way personal data is processed changes."
       }
     }
   }
