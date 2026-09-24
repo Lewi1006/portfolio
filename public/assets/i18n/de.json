@@ -10,7 +10,7 @@
 
   "about": {
     "title": "Über mich",
-    "description": "Schreiben Sie etwas über sich selbst, das mit IT zu tun hat. Warum begeistert Sie das Programmieren? Zeigen Sie Ihre Bereitschaft, neue Technologien zu erlernen.",
+    "description": "Ich komme aus dem Kommunikationsdesign und verbinde gerne Kreativität mit Technik. Mich interessiert, wie Dinge funktionieren und wie ich sie selbst umsetzen kann. Ich bin neugierig, analytisch und lerne gerne selbstständig, tausche mich aber genauso gerne mit anderen aus. Wenn ich vor einem Problem stehe, probiere ich verschiedene Lösungen aus, bis es funktioniert.",
     "location": "Berlin",
     "remote": "Offen für Remote-Arbeit",
     "button": "Kontaktiere mich"
@@ -18,7 +18,9 @@
 
   "skills": {
     "title": "Meine Skills",
-    "contact": "Ist die von dir gesuchte Kompetenz nicht dabei? <span class=\"highlight\">Melde dich bei mir!</span> Ich bin immer bereit, Neues zu lernen!"
+    "contactStart": "Ist die von dir gesuchte Kompetenz nicht dabei?",
+    "contactLink": "Melde dich bei mir!",
+    "contactEnd": "Ich bin immer bereit, Neues zu lernen!"
   },
 
   "portfolio": {
@@ -151,17 +153,37 @@
     "date": "Datum: 01. August 2026"
   },
 
-    "privacy": {
-    "title": "Datenschutzerklärung",
-    "sections": {
-      "section1": {
-        "title": "Subtitle",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque odio felis, iaculis ut massa eget, ornare lacinia urna. In dignissim justo eu velit sagittis, in scelerisque nulla convallis. Vestibulum eros lorem, sollicitudin eget eros non, varius aliquam mauris. Sed turpis ipsum, condimentum quis nulla at, lobortis facilisis ipsum. Nunc erat justo, hendrerit vel enim vitae, feugiat mattis dui. In auctor dignissim luctus. Mauris ornare ipsum at ultrices eleifend. Praesent tempus congue magna. Quisque libero erat, pharetra a neque et, imperdiet semper justo."
-      },
-      "section2": {
-        "title": "Subtitle",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque odio felis, iaculis ut massa eget, ornare lacinia urna. In dignissim justo eu velit sagittis, in scelerisque nulla convallis. Vestibulum eros lorem, sollicitudin eget eros non, varius aliquam mauris. Sed turpis ipsum, condimentum quis nulla at, lobortis facilisis ipsum. Nunc erat justo, hendrerit vel enim vitae, feugiat mattis dui. In auctor dignissim luctus. Mauris ornare ipsum at ultrices eleifend. Praesent tempus congue magna. Quisque libero erat, pharetra a neque et, imperdiet semper justo."
-      }
+  "privacy": {
+  "title": "Datenschutzerklärung",
+  "sections": {
+    "controller": {
+      "title": "Verantwortliche Person",
+      "text": "Verantwortlich für diese Website ist die Betreiberin dieser Website. Du kannst mich über die auf dieser Website angegebenen Kontaktdaten erreichen."
+    },
+    "website": {
+      "title": "Besuch dieser Website",
+      "text": "Beim Besuch dieser Website können technische Informationen wie deine IP-Adresse, Browsertyp und der Zeitpunkt deines Besuchs durch den Hosting-Anbieter verarbeitet werden. Diese Informationen werden benötigt, um die Website bereitzustellen und abzusichern."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "text": "Wenn du mich per E-Mail kontaktierst, werden die von dir übermittelten Daten ausschließlich zur Bearbeitung deiner Anfrage verwendet. Deine Daten werden nicht an Dritte weitergegeben, sofern dies nicht gesetzlich vorgeschrieben ist."
+    },
+    "server": {
+      "title": "Hosting",
+      "text": "Diese Website wird bei einem externen Hosting-Anbieter gehostet. Der Hosting-Anbieter kann technische Zugriffsdaten verarbeiten, um den sicheren und zuverlässigen Betrieb der Website zu gewährleisten."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "text": "Diese Website verwendet keine Cookies zu Werbe- oder Trackingzwecken. Technisch notwendige Speicherung kann verwendet werden, soweit dies für die Funktion der Website erforderlich ist."
+    },
+    "rights": {
+      "title": "Deine Rechte",
+      "text": "Du hast das Recht, Auskunft über deine personenbezogenen Daten zu erhalten sowie, sofern die gesetzlichen Voraussetzungen erfüllt sind, deren Berichtigung, Löschung oder Einschränkung der Verarbeitung zu verlangen. Außerdem hast du das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren."
+    },
+    "changes": {
+      "title": "Änderungen dieser Datenschutzerklärung",
+      "text": "Diese Datenschutzerklärung kann angepasst werden, wenn sich die Website oder die Art der Verarbeitung personenbezogener Daten ändert."
     }
   }
+}
 }

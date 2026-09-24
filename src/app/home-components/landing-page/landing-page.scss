@@ -43,9 +43,9 @@
       @include d-flex(row, center, center, 20px);
       width: 100%;
 
-        @include respond(zero, sm) {
-          @include d-flex(row, center, center, 8px);
-        }
+      @include respond(zero, sm) {
+        @include d-flex(row, center, center, 8px);
+      }
 
       .landing-line {
         width: 630px;
@@ -111,13 +111,20 @@
     .landing-scroll {
       @include d-flex(column, center, center, 12px);
 
-      img {
+      .arrow-wrapper {
         height: 200px;
-        width: auto;
+        overflow: hidden;
 
-        @include respond(zero, sm) {
-          height: auto;
-          width: 96px;
+        img {
+          height: 200px;
+          width: auto;
+
+          animation: arrowDown 2s linear infinite;
+
+          @include respond(zero, sm) {
+            height: auto;
+            width: 96px;
+          }
         }
       }
 
@@ -129,6 +136,16 @@
         @include respond(zero, sm) {
           font-size: 20px;
         }
+      }
+    }
+
+    @keyframes arrowDown {
+      from {
+        transform: translateY(-120px);
+      }
+
+      to {
+        transform: translateY(150px);
       }
     }
   }

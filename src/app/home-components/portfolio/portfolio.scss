@@ -116,7 +116,11 @@
         }
 
         .arrow-animation {
-          display: none;
+          // display: none;
+          @include d-flex(row, center, center);
+
+          opacity: 0;
+          visibility: hidden;
 
           position: absolute;
           right: 0;
@@ -133,7 +137,9 @@
           img {
             height: 40px;
             width: auto;
-            transform: rotate(45deg);
+            // transform: rotate(45deg);
+            transform: rotate(180deg);
+            transition: transform 0.4s ease;
           }
         }
       }
@@ -218,6 +224,13 @@
           font-size: 28px;
           border: solid black 2px;
           padding: 4px 8px;
+          transition: transform 0.2s ease;
+          transform-origin: left center;
+
+          &:hover {
+            transform: scaleX(1.15);
+            font-weight: 700;
+          }
 
           @include respond(l, desktop) {
             font-size: 24px;
@@ -245,10 +258,28 @@
         }
 
         .arrow-animation {
-          @include d-flex(row, center, center);
+          // @include d-flex(row, center, center);
+          opacity: 1;
+          visibility: visible;
+
+          img {
+            transform: rotate(45deg);
+          }
         }
       }
     }
+
+&.project-reversed {
+  .project-img {
+    .img-wrapper {
+      .arrow-animation {
+        img {
+          transform: rotate(315deg);
+        }
+      }
+    }
+  }
+}
 
     .project-content .project-details {
       @include d-flex(column, flex-start, center, 16px);

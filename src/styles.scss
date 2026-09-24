@@ -38,3 +38,22 @@ body {
 body.menu-open {
   overflow: hidden;
 }
+
+
+body {
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $beige;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $black;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $blue;
+  }
+}

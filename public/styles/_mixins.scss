@@ -19,10 +19,6 @@
       width: 620px;
       @include d-flex(row, flex-start, flex-end);
 
-      // @include respond(l, desktop) {
-      //   width: clamp(300px, 55dvh, 620px);
-      // }
-
       .img-wrapper {
         width: 100%;
 
@@ -35,7 +31,9 @@
           transform: translate(-50%, -50%);
 
           img {
-            transform: rotate(-45deg);
+            // transform: rotate(-45deg);
+             transform: rotate(180deg);
+            transition: transform 0.4s ease;
           }
         }
       }

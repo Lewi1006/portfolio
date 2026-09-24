@@ -117,5 +117,17 @@
   img {
     height: 100%;
     width: fit-content;
+      transition: transform 0.6s ease;
+  }
+}
+
+
+.arrow-left.arrow-scrolled {
+  img {
+    transform: translate(-100px, 100px);
+
+    @include respond-max(sm) {
+      transform: translate(-60px, 60px);
+    }
   }
 }

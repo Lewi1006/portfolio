@@ -28,7 +28,6 @@
     @include respond-max(l) {
       @include d-flex(column, center, center);
     }
-
   }
 
   .footer-left {
@@ -63,9 +62,22 @@
       height: 100%;
       @include d-flex(row, center, space-between, 40px);
 
-      img {
-        width: 40px;
-        height: auto;
+      li {
+        a {
+          display: block;
+
+          img {
+            width: 40px;
+            height: auto;
+            transition: transform 0.2s ease;
+          }
+
+          &:hover {
+            img {
+              transform: translateY(-6px);
+            }
+          }
+        }
       }
     }
 

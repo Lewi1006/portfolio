@@ -13,7 +13,7 @@ export class Portfolio {
     {
       id: 1,
       titleKey: 'portfolio.projects.project1.title',
-      img: 'assets/img/placeholder.jpg',
+      img: 'assets/img/join.png',
       skillsKey: 'portfolio.projects.project1.skills',
       descriptionKey:
         'portfolio.projects.project1.description',
@@ -22,7 +22,7 @@ export class Portfolio {
     {
       id: 2,
       titleKey: 'portfolio.projects.project2.title',
-      img: 'assets/img/placeholder.jpg',
+      img: 'assets/img/pollo1.png',
       skillsKey: 'portfolio.projects.project2.skills',
       descriptionKey:
         'portfolio.projects.project2.description',
