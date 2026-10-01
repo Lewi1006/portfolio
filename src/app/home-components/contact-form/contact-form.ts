@@ -42,9 +42,17 @@ export class ContactForm {
       this.http.post('/php/contact-form-mail.php', formData).subscribe({
         next: (response) => {
           console.log('Mail sent:', response);
+          this.contactForm.reset({
+            name: '',
+            email: '',
+            message: '',
+            privacy: false,
+          });
         },
         error: (error) => {
           console.error('Mail sending failed:', error);
+          console.log('Status:', error.status);
+          console.log('Response:', error.error);
         },
       });
     }
