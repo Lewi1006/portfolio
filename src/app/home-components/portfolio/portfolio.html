@@ -30,7 +30,13 @@
               <p class="project-description">
                 {{ currentProject.descriptionKey | translate }}
               </p>
-              <button class="project-btn">Github</button>
+              <div class="project-actions">
+                <a class="project-btn" [href]="currentProject.gitHub" target="_blank"> Github </a>
+
+                <a class="project-btn" [href]="currentProject.liveUrl" target="_blank">
+                  Test live
+                </a>
+              </div>
             </div>
           </div>
         </article>

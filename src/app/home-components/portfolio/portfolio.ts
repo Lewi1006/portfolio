@@ -18,6 +18,7 @@ export class Portfolio {
       descriptionKey:
         'portfolio.projects.project1.description',
       gitHub: 'https://github.com/Lewi1006',
+      liveUrl: 'https://leoniewind.com/join/',
     },
     {
       id: 2,
@@ -27,6 +28,7 @@ export class Portfolio {
       descriptionKey:
         'portfolio.projects.project2.description',
       gitHub: 'https://github.com/Lewi1006',
+      liveUrl: 'https://leoniewind.com/el-pollo-loco/',
     },
   ];
 

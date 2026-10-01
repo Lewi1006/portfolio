@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact-form',
@@ -10,6 +11,8 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './contact-form.scss',
 })
 export class ContactForm {
+  constructor(private http: HttpClient) {}
+
   contactForm = new FormGroup({
     name: new FormControl('', { validators: [Validators.required] }),
     email: new FormControl('', { validators: [Validators.required, Validators.email] }),
@@ -35,7 +38,15 @@ export class ContactForm {
 
   formSubmit() {
     if (this.contactForm.valid) {
-      console.log(this.contactForm.value);
+      const formData = this.contactForm.value;
+      this.http.post('/php/contact-form-mail.php', formData).subscribe({
+        next: (response) => {
+          console.log('Mail sent:', response);
+        },
+        error: (error) => {
+          console.error('Mail sending failed:', error);
+        },
+      });
     }
   }
 }
