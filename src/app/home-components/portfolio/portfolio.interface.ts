@@ -5,4 +5,5 @@ export interface Project{
     skillsKey: string;
     descriptionKey: string;
     gitHub: string;
+    liveUrl: string;
 }
