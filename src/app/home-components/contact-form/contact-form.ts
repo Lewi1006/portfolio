@@ -39,7 +39,7 @@ export class ContactForm {
   formSubmit() {
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;
-      this.http.post('/php/contact-form-mail.php', formData).subscribe({
+      this.http.post('/portfolio/php/contact-form-mail.php', formData).subscribe({
         next: (response) => {
           console.log('Mail sent:', response);
           this.contactForm.reset({
