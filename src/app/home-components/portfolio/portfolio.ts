@@ -17,7 +17,7 @@ export class Portfolio {
       skillsKey: 'portfolio.projects.project1.skills',
       descriptionKey:
         'portfolio.projects.project1.description',
-      gitHub: 'https://github.com/Lewi1006',
+      gitHub: 'https://github.com/Lewi1006/join',
       liveUrl: 'https://leoniewind.com/join/',
     },
     {
@@ -27,7 +27,7 @@ export class Portfolio {
       skillsKey: 'portfolio.projects.project2.skills',
       descriptionKey:
         'portfolio.projects.project2.description',
-      gitHub: 'https://github.com/Lewi1006',
+      gitHub: 'https://github.com/Lewi1006/El-pollo-loco',
       liveUrl: 'https://leoniewind.com/el-pollo-loco/',
     },
   ];

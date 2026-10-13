@@ -73,11 +73,6 @@
           img {
             width: 75px;
             height: auto;
-            // transition: transform 0.5s ease;
-
-            // &:hover {
-            //   transform: rotateY(360deg);
-            // }
 
             @include respond(zero, sm) {
               width: 55px;
