@@ -46,17 +46,17 @@
     "references": {
       "reference1": {
         "name": "V. Schuster",
-        "role": "Team Partner",
+        "role": "Team-Partner",
         "text": "Leo hat das Team mit ihrer hervorragenden Organisation und ihrer klaren Kommunikation wirklich zusammengehalten. Ohne ihr Engagement wären wir nicht so weit gekommen."
       },
       "reference2": {
         "name": "E.Eichinger",
-        "role": "Team Partner",
+        "role": "Team-Partner",
         "text": "Leo war eine hervorragende Teamkollegin bei DA. Ihr positives Engagement und ihre Bereitschaft, Verantwortung zu übernehmen, haben wesentlich dazu beigetragen, dass wir unsere Ziele erreichen konnten."
       },
       "reference3": {
         "name": "I. Nuber",
-        "role": "Frontend Engineer",
+        "role": "Frontend-Entwickler",
         "text": "Es war mir eine große Freude, mit Leo zusammenzuarbeiten. Sie versteht es, die Teammitglieder dazu zu motivieren, ihr Bestes zu geben, und bringt immer neue Ideen in die Brainstorming-Runden ein."
       }
     }

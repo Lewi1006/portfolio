@@ -14,8 +14,23 @@ export class ContactForm {
   constructor(private http: HttpClient) {}
 
   contactForm = new FormGroup({
-    name: new FormControl('', { validators: [Validators.required] }),
-    email: new FormControl('', { validators: [Validators.required, Validators.email] }),
+    name: new FormControl('', {
+      validators: [
+        Validators.required,
+        Validators.pattern(
+          /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžæÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð .'-]+\s+[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžæÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð .'-]+$/i,
+        ),
+      ],
+    }),
+    email: new FormControl('', {
+      validators: [
+        Validators.required,
+        Validators.email,
+        Validators.pattern(
+          /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+        ),
+      ],
+    }),
     message: new FormControl('', { validators: [Validators.required] }),
     privacy: new FormControl(false, { validators: [Validators.requiredTrue] }),
   });
@@ -41,7 +56,6 @@ export class ContactForm {
       const formData = this.contactForm.value;
       this.http.post('/portfolio/php/contact-form-mail.php', formData).subscribe({
         next: (response) => {
-          console.log('Mail sent:', response);
           this.contactForm.reset({
             name: '',
             email: '',
@@ -51,8 +65,6 @@ export class ContactForm {
         },
         error: (error) => {
           console.error('Mail sending failed:', error);
-          console.log('Status:', error.status);
-          console.log('Response:', error.error);
         },
       });
     }

@@ -10,13 +10,10 @@ export class ScrollArrow implements AfterViewInit{
    ngAfterViewInit() {
     
     const observer = new IntersectionObserver(([entry]) => {
-      console.log('isIntersecting:', entry.isIntersecting);
       
       if (entry.isIntersecting) {
-        console.log('ADDING CLASS');
         this.elementRef.nativeElement.classList.add('arrow-scrolled');
       } else {
-         console.log('REMOVING CLASS');
         this.elementRef.nativeElement.classList.remove('arrow-scrolled');
       }
     },
