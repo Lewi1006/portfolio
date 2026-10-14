@@ -39,6 +39,13 @@ body.menu-open {
   overflow: hidden;
 }
 
+html {
+  overflow-x: hidden;
+}
+
+html:has(body.menu-open) {
+  overflow: hidden;
+}
 
 body {
   &::-webkit-scrollbar {
