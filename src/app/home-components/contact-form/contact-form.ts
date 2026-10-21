@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
+import { AlertService } from '../../services/alert.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -11,6 +12,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './contact-form.scss',
 })
 export class ContactForm {
+  alertService = inject(AlertService);
+
   constructor(private http: HttpClient) {}
 
   contactForm = new FormGroup({
@@ -62,6 +65,8 @@ export class ContactForm {
             message: '',
             privacy: false,
           });
+
+          this.alertService.success('Your message has been sent successfully!', 3000);
         },
         error: (error) => {
           console.error('Mail sending failed:', error);
